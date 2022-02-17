@@ -28,7 +28,9 @@ Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDoc
 - Průběžné rozšiřování seznamu klišé.
 - Další upozornění: nejednotný sloh, opakující se začátky odstavců, edukativní modul "not OK boomer" (globální oteplování → klimatická krize).
 - Oddělení programu a vstupních dat, s možností definovat uživatelské seznamy frází (např. ve sportovní redakci).
-- Spustitelný soubor pro Windows, případně Mac OS.
+- Podpora YAML záhlaví markdownových souborů.
+- [možná] Podpora formátu OpenDocument.
+- [možná] Spustitelný soubor pro Windows, případně Mac OS.
 
 ## Poděkování
 
