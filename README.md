@@ -2,7 +2,7 @@
 
 Skript pomáhá s editováním textů:
 
-- Upozorňuje na klišé. Poradí si i s různými časy a tvary. Seznam nevhodných obratů je posbíraný z vlastní praxe, z interních materiálů několika vydavatelství, z diplomek a z dalších zdrojů.
+- Upozorňuje na klišé. Poradí si i s různými časy a tvary, neunikne mu kostlivec ve skříni ani kostlivci ve skříních. Seznam nevhodných obratů je posbíraný z vlastní praxe, z interních materiálů několika vydavatelství, z diplomek a z dalších zdrojů. Velký dík kolegům a kolegyním za pomoc.
 - Vypisuje slova následující po přímé řeči. Odhaluje tak opakování typu _prozradil – prozradil – prozradil_.
 - Vypisuje zduplikovaná slova.
 - Vypisuje termíny v uvozovkách.
