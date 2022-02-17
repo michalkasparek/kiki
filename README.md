@@ -15,7 +15,7 @@ Kiki pouze _pomáhá_, ale needituje. Soubor otevírá jen pro čtení. Neřeš�
 
 ## Použití
 
-Skript je napsaný v Pythonu a k běhu potřebuje knihovny nltk a markdown.
+Skript pochopitelně vyžaduje nainstalovaný Python, k němu ještě knihovny _nltk_ a _markdown_.
 
 V konzoli nebo příkazové řádce použijte příkaz:
 
@@ -38,4 +38,4 @@ Seznam nevhodných obratů je posbíraný dílem z osobní praxe, dílem z inter
 
 ## Chce se vám blít z nějakého klišé, které Kiki nezná?
 
-Sem s ním: [michal.kasparek@gmail.com](mailto:michal.kasparek@gmail.com)
+Sem s ním: [michal.kasparek@gmail.com](mailto:michal.kasparek@gmail.com).
