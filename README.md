@@ -1,6 +1,6 @@
 # Kiki
 
-Skript pomáhá hlídat stylistiku a gramatiku při editování českých textů určených širokému publiku. Není náhradou kontroly pravopisu, ale jejím doplněním.
+Skript kontroluje stylistiku a gramatiku českých textů. Napsal jsem ho, aby mi pomáhal při editování zpravodajských a publicistických článků, ale hodit se může i při finišování diplomky nebo románu. Není náhradou kontroly pravopisu, je jejím doplněním.
 
 - Upozorňuje na klišé. Poradí si i s různými časy a tvary, neunikne mu _kostlivec ve skříni_ ani _kostlivci ve skříních_.
 - Najde nejdelší větu. Tu jde obvykle zkrátit.
