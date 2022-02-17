@@ -3,7 +3,7 @@
 Skript pomáhá s editováním textů:
 
 - Upozorňuje na klišé. Poradí si i s různými časy a tvary. Seznam nevhodných obratů je posbíraný z vlastní praxe, z interních materiálů několika vydavatelství, z diplomek a z dalších zdrojů.
-- Vypisuje slova následující po přímé řeči, odhaluje tak opakování typu _prozradil – prozradil – prozradil_.
+- Vypisuje slova následující po přímé řeči. Odhaluje tak opakování typu _prozradil – prozradil – prozradil_.
 - Vypisuje zduplikovaná slova.
 - Vypisuje termíny v uvozovkách.
 - Upozorňuje na nevhodně použitá interpunkční znaménka.
