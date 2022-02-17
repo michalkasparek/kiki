@@ -8,10 +8,10 @@ Skript pomáhá hlídat stylistiku a gramatiku při editování českých textů
 - Vypisuje zduplikovaná slova.
 - Vypisuje termíny v uvozovkách.
 - Upozorňuje na nevhodně použitá interpunkční znaménka.
-- Vypisuje úseky, ve kterých se objevují zrádná slova jako „díky“, „Čechy“ nebo „Holandsko“.  
+- Vypisuje úseky, ve kterých se objevují slova často používaná v nevhodném významu: _díky_, _Čechy_ nebo _Holandsko_.  
 - Počítá základní statistiky, jako je rozsah a odhadovaná doba čtení.
 
-Kiki pouze _pomáhá_, ale needituje. Soubor otevírá jen pro čtení. Neřeší, jestli ve švech praská divadlo, nebo sako.
+Kiki pouze _pomáhá_, ale needituje. Soubor otevírá jen pro čtení. Neřeší, jestli ve švech praská divadlo, nebo sako. Staví vedle sebe jednoznačně odporné fráze i slova, která jsou ok, pokud se to s nimi nepřehání.
 
 ## Použití
 
@@ -21,7 +21,7 @@ V konzoli nebo příkazové řádce použijte příkaz:
 
     kiki.py soubor_s_textem
   
-Skript si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s markdownem.
+Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s markdownem.
 
 ## Co je v plánu (jaro 2022)
 
