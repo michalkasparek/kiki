@@ -33,3 +33,7 @@ Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDoc
 ## Poděkování
 
 Seznam nevhodných obratů je posbíraný dílem z osobní praxe, dílem z interních materiálů několika vydavatelství. Velký dík kolegům a kolegyním za to, že se o ně podělili.
+
+## Chce se vám blít z nějakého klišé, které Kiki nezná?
+
+Sem s ním: [michal.kasparek@gmail.com](mailto:michal.kasparek@gmail.com)
