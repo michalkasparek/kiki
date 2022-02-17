@@ -26,7 +26,7 @@ Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDoc
 ## Co je v plánu (jaro 2022)
 
 - Průběžné rozšiřování seznamu klišé.
-- Další upozornění: nejednotný sloh, opakující se začátky odstavců, edukativní modul "OK boomer" (globální oteplování → klimatická krize).
+- Další upozornění: nejednotný sloh, opakující se začátky odstavců, edukativní modul "not OK boomer" (globální oteplování → klimatická krize).
 - Oddělení programu a vstupních dat, s možností definovat uživatelské seznamy frází (např. ve sportovní redakci).
 - Spustitelný soubor pro Windows, případně Mac OS.
 
