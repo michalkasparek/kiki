@@ -21,7 +21,7 @@ Skript pochopitelně vyžaduje nainstalovaný Python, k němu ještě knihovny _
 
 V konzoli nebo příkazové řádce použijte příkaz:
 
-    kiki.py soubor_s_textem
+    .\kiki.py soubor_s_textem
   
 Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s markdownem.
 
