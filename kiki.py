@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+"""
+Skript pomáhá hlídat stylistiku a gramatiku při editování českých textů určených širokému publiku.
+
+__version__ = "0.1"
+__author__ = "Michal Kašpárek"
+__email__ = "michal.kasparek@gmail.com"
+__license__ = "MIT"
+__status__ = "Development"
+"""
+
 import sys # umožní čtení argumentů z příkazové řádky
 import re # umožní práci s regulérními výrazy
 from markdown import markdown # umožní práci s markdownem
@@ -5,9 +16,9 @@ import nltk # umožní tokenizaci do vět
 
 # Definice
 
-chyby = ["\sA\svýsledek\?", "absolutn\w{1,3}\s\wjistot\w{1,3}", "během", "bitv\w{1,4}\so\s\w{1,10}", "bobřík\w{,3}", "brous\w{1,4}\szuby", "cel\w{1,3}\sřad\w{1,3}", "cel\w{,3}\sinterne\w{1,3}", "co se týče", "čas ukáže", "časovan\w{1,3}\sbomb\w{1,3}", "časov\w{1,3}\shorizont\w{1,3}", "člověčenství", "člověčin\w{1,3}", "dál\w{,1}\sprohlub\w{1,7}", "daňov\w{1,3}\spoplatní\w{1,4}", "dedik\w{1,8}", "diskur\w{1,7}", "\w{,2}dojde k", "domác\w{1,4}\smazlíč\w{1,4}", "doslova", "došlo\s\w{,5}\s{,1}\w{,5}\s{,1}k\s{,}\w{,15}", "drtiv\w{1,3}\světšin\w{1,3}", "druhak", "\w{,5}financov\w{1,6}", "finančn\w{1,3}\sprostředk\w{1,4}", "hlavní\w{,4}\sprotagonist\w{1,4}", "jablk\w{1,3}\ssváru", "jak\w{,1}\spo\smásle", "\w{,3}kontrover\w{1,7}", "kostliv\w{1,5}\sskřín\w{1,2}", "křišťálov\w{1,3}\skoul\w{1,3}", "kudy běží zajíc", "kultovn\w{1,6}", "kvituji", "kvitova\w{1,4}", "lidsk\w{1,3}\sfakto\w{1,3}", "manuálw\{1,2}\szručn\w{1,4}", "medvědí\sslužb\w{1,3}", "mráz po zádech", "muž\w{1,4}\szákona", "na dlouhou trať", "na kobereček", "na poli", "na půdě", "na pořadu dne", "na pravém místě", "na svém místě", "napříč spektrem", "následně", "nic snazšího než", "nepřizpůsobiv\w{1,5}", "nervy v kýblu", "n\wž\w{1,2}\sna\skrk\w{,1}", "o čem přemýšlet", "olej do ohně", "ostře kritiz\w{1,6}","ostr\w{1,5} kritik\w{1,10}", "paradigm\w{1,5}", "part\w{1,3}\snadšenců", "platform\w{1,5}", "pod taktovkou", "pojďme", "posvě\w{1,6}", "prask\w{1,7}\sve\sšvech", "projekt\w{,3}", "prostě", "prý", "přehrš\w{1,2}", "rasov\w{1,4}\spodtext\w{,3}", "realiz\w{1,6}", "s kůží na trh", "sněhov\w{1,3}\s\nadílk\w{1,3}", "státn\w{1,3}\skas\w{1,5}", "souboj\w{,3}\stitánů", "svým způsobem", "širok\w{1,3}\s\veřejnos\w{1,3}", "špičk\w{1,3}\sledovc{1,3}", "tah\w{,2}\sna\sbranku", "totiž", "třešničk\w{1,3}\sna\sdortu", "tuzem\w{1,5}", "údajně", "úheln\w{1,3}\sk\wmen\w{,3}", "v neposlední řadě", "v podstatě", "v pravý čas", "v průběhu", "v rámci", "v současnosti", "větší jak\s", "víc jak\s", "více jak\s", "vlajkov\w{1,3}\slo\w{1,4}", "vlastně", "volnočasov\w{1,3}\saktivi\w{1,5}", "\w{,2}vykomuni\w{1,8}", "vymalováno", "z našich daní", "z pochopitelných důvodů", "zainvestov\w{1,5}", "\w{,2}zajímav\w{1,6}", "zelené razítko", "ztrá\w{1,4}\sna\sživotech", "želíz\w{1,5}\sv\sohni"]
-kontextovky = ["[\s\S]{25}kvůli[\s\S]{44}", "[\s\S]{25}díky[^!,\.][\s\S]{45}", "[\s\S]{24}\sšanc[\s\S]{45}", "[\s\S]{24}\sČech[\s\S]{45}", "[\s\S]{25}Holandsk[\s\S]{45}", "[\s\S]{25}Holanďan[\s\S]{45}"]
-typochyby = ["\.\.\.", "--", "\d{1,8}-{,1}ti\w{,10}", "\d{1,12}x", "\"\w{1,}", "\w{1,}[\.,\?!]{,1}\"", ",[^\W\d_]{1,12}", "\w{1,12}\'"]
+ptydepe = ["absolutn\w{1,3}\s\wjistot\w+", "(?<!\w)během", "bitv\w+\so\s\w+", "bobřík\w{,3}", "brous\w+\szuby", "cel\w{1,3}\sřad\w{1,3}", "cel\w{,3}\sinterne\w{1,3}", "co se týče", "čas ukáže", "časovan\w+\sbomb\w+", "časov\w+\shorizont\w+", "člověčenství", "člověčin\w+", "dál\w?\sprohl\w+", "daňov\w+\spoplatní\w+", "(?<!\w)dedik\w+", "(?<!\w)diskur\w+", "\w{,2}dojde\sk\s\w+", "domác\w+\smazlíč\w+", "doslova", "\w{,2}došlo\sk\s\w+", "drtiv\w+\světšin\w+", "druhak", "\w*financov\w+", "finančn\w+\sprostředk\w+", "hlavní\w*\sprotagonist\w{1,4}", "jablk\w+\ssváru", "jak\w?\spo\smásle", "\w{,3}kontrover\w+", "kostliv\w+\sskřín\w+", "křišťálov\w+\skoul\w+", "lesbičk\w+", "kudy běží zajíc", "kultovn\w+", "kvituji", "kvitova\w+", "lidsk\w+\sfakto\w+", "manuálw\+\szručn\w+", "medvědí\sslužb\w+", "mráz po zádech", "muž\w+\szákona", "na dlouhou trať", "na kobereček", "na poli", "na půdě", "na pořadu dne", "na pravém místě", "na svém místě", "napříč spektrem", "narativ\w*", "následně", "nic snazšího", "nepřizpůsobiv\w+", "nervy v kýblu", "n\wž\w{1,2}\sna\skrk\w?", "o čem přemýšlet", "olej do ohně", "ostře kritiz\w+","ostr\w+ kritik\w+", "paradigm\w+", "part\w+\snadšenců", "platform\w+", "pod taktovkou", "pojďme", "posvě\w+", "prask\w+\sve\sšvech", "projekt\w{,3}", "prostě", "prý", "přehrš\w+", "rasov\w+\spodtext\w*", "realiz\w+", "s kůží na trh", "sněhov\w+\s\nadílk\w+", "státn\w+\skas\w{1,5}", "soubo\w+\stitánů", "svého času", "svým způsobem", "širok\w+\s\veřejnos\w+", "špičk\w{1,3}\sledovc+", "tah\w{,2}\sna\sbranku", "totiž", "třešničk\w+\sna\sdortu", "tuzemsk\w+", "údajně", "úheln\w+\sk\wmen\w*", "v neposlední řadě", "v podstatě", "v pravý čas", "v průběhu", "v rámci", "v současnosti", "větší\w* jak[^\w]", "víc\w*\sjak(?=\s)", "vlajkov\w+\slo\w{1,2}", "vlastně", "volnočasov\w+\saktivi\w+", "\w{,2}vykomuni\w+", "vymalováno", "z důvodu", "z našich daní", "z pochopitelných důvodů", "zainvestov\w+", "\w{,3}zajímav\w+", "zelen\w+ razítk\w+", "ztrá\w{1,4}\sna\sživotech", "želíz\w+\sv\sohni"]
+typochyby = ["\.\.\.", "--", "\d{1,8}-?ti\w{,10}", "\d{1,12}x", "\"\w{1,}", "\w{1,}[\.,\?!]?\"", ",[^\W\d_]{1,12}", "\w{1,12}\'"]
+kontextovky = ["[\s\S]{25}kvůli[\s\S]{44}", "[\s\S]{25}díky[^!,\.\w][\s\S]{44}", "[\s\S]{24}\sšanc[\s\S]{45}", "[\s\S]{24}\sČech[\s\S]{45}", "[\s\S]{25}Holandsk[\s\S]{41}", "[\s\S]{25}Holanďan[\s\S]{41}"]
 
 # Načtení souboru
 
@@ -56,10 +67,10 @@ slovapouvozovkach = [re.sub("[\.,\?:;]", "", x) for x in slovapouvozovkach] # od
 
 # Ošklivé fráze
 
-nalezenechyby = [] # vytvoří prázdný seznam pro nalezené chyby
-for chyby in chyby: # jedna chyba za druhou
-	nalezenachyba = re.findall(chyby, plaintext, re.IGNORECASE) # vyhledá všechny výskyty chyb
-	nalezenechyby.append(nalezenachyba) # každou nalezenou chybu doplní do seznamu
+nalezeneptydepe = [] # vytvoří prázdný seznam pro nalezené chyby
+for ptydepe in ptydepe: # jedna chyba za druhou
+	nalezenachyba = re.findall(ptydepe, plaintext, re.IGNORECASE) # vyhledá všechny výskyty chyb
+	nalezeneptydepe.append(nalezenachyba) # každou nalezenou chybu doplní do seznamu
 
 # Jedno slovo dvakrát po sobě
 
@@ -68,7 +79,7 @@ opakovani = [re.sub("(\\w+)", "\\1 \\1", x) for x in opakovani] # zduplikuje dup
 
 # Pojmy v uvozovkách
 
-uvozovky = re.findall("„\\w+\\s*\\w*\\s*\\w*“", plaintext, re.IGNORECASE) # 1-3 slova mezi uvozovkami
+uvozovky = re.findall("„\\w+\\s*\\w*\\s*\\w*“", plaintext, re.IGNORECASE) # 1 až 3 slova mezi uvozovkami
 
 # Typografické chyby
 
@@ -86,8 +97,8 @@ for kontextovky in kontextovky:
 				
 # Úprava seznamů pro pěkný výstup
 
-nalezenechyby = list(filter(None, nalezenechyby)) # vymaže prázdné subsety
-nalezenechyby = sum(nalezenechyby, []) # spojí subsety do jednoho setu
+nalezeneptydepe = list(filter(None, nalezeneptydepe)) # vymaže prázdné subsety
+nalezeneptydepe = sum(nalezeneptydepe, []) # spojí subsety do jednoho setu
 	
 nalezenetypochyby = list(filter(None, nalezenetypochyby)) # vymaže prázdné subsety
 nalezenetypochyby = sum(nalezenetypochyby, []) # spojí subsety do jednoho setu
@@ -99,13 +110,14 @@ nalezenekontextovky = sum(nalezenekontextovky, []) # vymaže prázdné subsety
 print ("*** KIKI POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
 print (titulek, "\n- titulek:", len(titulek), "znaků s mezerami\n- dokument:", pocetznaku, "znaků s mezerami,", pocetslov, "slov,", ns, "NS,", minutycteni, "min čtení\n")
 print ("Nejdelší slovo:\n- " + str(nejdelsislovo) + " (" + str(nejdelsislovodelka) + " znaků)\n")
-print ("Nejdelší věta:\n- " + str(nejdelsiveta) + " ("+ str(nejdelsivetaslova) + " slov, " + str(nejdelsivetaznaky) + " znaků)\n")
+if nejdelsivetaznaky > 160:
+	print ("Nejdelší věta:\n- " + str(nejdelsiveta) + " ("+ str(nejdelsivetaslova) + " slov, " + str(nejdelsivetaznaky) + " znaků)\n")
 if len(slovapouvozovkach)!= 0:
 	print ("Pořadí slov po citacích:")
 	print ("-", ", ".join(slovapouvozovkach), "\n")
-if len(nalezenechyby) != 0:
+if len(nalezeneptydepe) != 0:
 	print ("Problematická slova a obraty:")
-	print ("-", ", ".join(nalezenechyby), "\n")
+	print ("-", ", ".join(nalezeneptydepe), "\n")
 if len(opakovani) != 0:
 	print ("Zduplikovaná slova:")
 	print ("-", ", ".join(opakovani), "\n")
