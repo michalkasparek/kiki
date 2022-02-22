@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-Skript upozorňuje na stylistické a gramatické nedostatky (českých) textů.
+Skript upozorňuje na stylistické nedostatky (českých) textů.
 
-__version__ = "0.2"
+__version__ = "0.2.1"
 __author__ = "Michal Kašpárek"
 __email__ = "michal.kasparek@gmail.com"
 __license__ = "MIT"
@@ -123,7 +123,7 @@ nalezenekontextovky = sum(nalezenekontextovky, []) # vymaže prázdné subsety
 
 # Výpis
 
-print ("*** KIKI v 0.2 POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
+print ("*** KIKI v 0.2.1 POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
 print (titulek, "\n- titulek:", len(titulek), "znaků s mezerami\n- dokument:", pocetznaku, "znaků s mezerami,", pocetslov, "slov,", ns, "NS,", minutycteni, "min čtení\n")
 print ("Nejdelší slovo:\n- " + str(nejdelsislovo) + " (" + str(nejdelsislovodelka) + " znaků)\n")
 if nejdelsivetaznaky > 160:
