@@ -1,0 +1,112 @@
+absolutn\w{1,3}\s\wjistot\w+
+ale\s\w+\sjim\stam\slidi
+asi tak všechno, co se s tím dá dělat
+asi tak všechno, co s tím můžeme dělat
+(?<!\w)během
+bitv\w+\so\s\w+
+bobřík\w{,3}
+brous\w+\szuby
+cel\w{1,3}\sřad\w{1,3}
+cel\w{,3}\sinterne\w{1,3}
+co se týče
+čas ukáže
+časovan\w+\sbomb\w+
+časov\w+\shorizont\w+
+člověčenství
+člověčin\w+
+dál\w?\sprohl\w+
+daňov\w+\spoplatní\w+
+(?<!\w)dedik\w+
+(?<!\w)diskur\w+
+\w{,2}dojde\sk\s\w+
+domác\w+\smazlíč\w+
+doslova
+\w{,2}došlo\sk\s\w+
+drtiv\w+\světšin\w+
+druhak
+\w*financov\w+
+finančn\w+\sprostředk\w+
+hlavní\w*\sprotagonist\w{1,4}
+jablk\w+\ssváru
+jak\w?\spo\smásle
+\w{,3}kontrover\w+
+kostliv\w+\sskřín\w+
+křišťálov\w+\skoul\w+
+lesbičk\w+
+kudy běží zajíc
+kultovn\w+
+kvituji
+kvitova\w+
+lidsk\w+\sfakto\w+
+manuálw\+\szručn\w+
+medvědí\sslužb\w+
+modří už vědí
+mráz po zádech
+muž\w+\szákona
+na dlouhou trať
+na kobereček
+na poli
+na půdě
+na pořadu dne
+na pravém místě
+na svém místě
+napříč spektrem
+narativ\w*
+následně
+nic snazšího
+nepřizpůsobiv\w+
+nervy v kýblu
+n\wž\w{1,2}\sna\skrk\w?
+o čem přemýšlet
+olej do ohně
+ostře kritiz\w+
+ostr\w+ kritik\w+
+paradigm\w+
+part\w+\snadšenců
+platform\w+
+pod taktovkou
+pojďme
+posvě\w+
+prask\w+\sve\sšvech
+projekt\w{,3}
+prostě
+prý
+přehrš\w+
+rasov\w+\spodtext\w*
+realiz\w+
+řečeno s klasikem
+s kůží na trh
+sněhov\w+\s\nadílk\w+
+státn\w+\skas\w{1,5}
+soubo\w+\stitánů
+svého času
+svým způsobem
+širok\w+\s\veřejnos\w+
+špičk\w{1,3}\sledovc+
+tah\w{,2}\sna\sbranku
+totiž
+třešničk\w+\sna\sdortu
+tuzemsk\w+
+údajně
+úheln\w+\sk\wmen\w*
+v neposlední řadě
+v podstatě
+v pravý čas
+v průběhu
+v rámci
+v současnosti
+větší\w* jak[^\w]
+víc\w*\sjak(?=\s)
+vlajkov\w+\slo\w{1,2}
+vlastně
+volnočasov\w+\saktivi\w+
+\w{,2}vykomuni\w+
+vymalováno
+z důvodu
+z našich daní
+z pochopitelných důvodů
+zainvestov\w+
+\w{,3}zajímav\w+
+zelen\w+ razítk\w+
+ztrá\w{1,4}\sna\sživotech
+želíz\w+\sv\sohni

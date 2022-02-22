@@ -1,29 +1,45 @@
 #!/usr/bin/env python
 """
-Skript pomáhá hlídat stylistiku a gramatiku při editování českých textů určených širokému publiku.
+Skript upozorňuje na stylistické a gramatické nedostatky (českých) textů.
 
-__version__ = "0.1"
+__version__ = "0.2"
 __author__ = "Michal Kašpárek"
 __email__ = "michal.kasparek@gmail.com"
 __license__ = "MIT"
 __status__ = "Development"
 """
 
-import sys # umožní čtení argumentů z příkazové řádky
-import re # umožní práci s regulérními výrazy
-from markdown import markdown # umožní práci s markdownem
-import nltk # umožní tokenizaci do vět
+import sys # čtení argumentů z příkazové řádky
+import os # načítání souborů z podadresářů na různých platformách
+import re # práce s regulérními výrazy
+from markdown import markdown # práce s markdownem
+import nltk # tokenizace do vět
 
-# Definice
-
-ptydepe = ["absolutn\w{1,3}\s\wjistot\w+", "(?<!\w)během", "bitv\w+\so\s\w+", "bobřík\w{,3}", "brous\w+\szuby", "cel\w{1,3}\sřad\w{1,3}", "cel\w{,3}\sinterne\w{1,3}", "co se týče", "čas ukáže", "časovan\w+\sbomb\w+", "časov\w+\shorizont\w+", "člověčenství", "člověčin\w+", "dál\w?\sprohl\w+", "daňov\w+\spoplatní\w+", "(?<!\w)dedik\w+", "(?<!\w)diskur\w+", "\w{,2}dojde\sk\s\w+", "domác\w+\smazlíč\w+", "doslova", "\w{,2}došlo\sk\s\w+", "drtiv\w+\světšin\w+", "druhak", "\w*financov\w+", "finančn\w+\sprostředk\w+", "hlavní\w*\sprotagonist\w{1,4}", "jablk\w+\ssváru", "jak\w?\spo\smásle", "\w{,3}kontrover\w+", "kostliv\w+\sskřín\w+", "křišťálov\w+\skoul\w+", "lesbičk\w+", "kudy běží zajíc", "kultovn\w+", "kvituji", "kvitova\w+", "lidsk\w+\sfakto\w+", "manuálw\+\szručn\w+", "medvědí\sslužb\w+", "mráz po zádech", "muž\w+\szákona", "na dlouhou trať", "na kobereček", "na poli", "na půdě", "na pořadu dne", "na pravém místě", "na svém místě", "napříč spektrem", "narativ\w*", "následně", "nic snazšího", "nepřizpůsobiv\w+", "nervy v kýblu", "n\wž\w{1,2}\sna\skrk\w?", "o čem přemýšlet", "olej do ohně", "ostře kritiz\w+","ostr\w+ kritik\w+", "paradigm\w+", "part\w+\snadšenců", "platform\w+", "pod taktovkou", "pojďme", "posvě\w+", "prask\w+\sve\sšvech", "projekt\w{,3}", "prostě", "prý", "přehrš\w+", "rasov\w+\spodtext\w*", "realiz\w+", "s kůží na trh", "sněhov\w+\s\nadílk\w+", "státn\w+\skas\w{1,5}", "soubo\w+\stitánů", "svého času", "svým způsobem", "širok\w+\s\veřejnos\w+", "špičk\w{1,3}\sledovc+", "tah\w{,2}\sna\sbranku", "totiž", "třešničk\w+\sna\sdortu", "tuzemsk\w+", "údajně", "úheln\w+\sk\wmen\w*", "v neposlední řadě", "v podstatě", "v pravý čas", "v průběhu", "v rámci", "v současnosti", "větší\w* jak[^\w]", "víc\w*\sjak(?=\s)", "vlajkov\w+\slo\w{1,2}", "vlastně", "volnočasov\w+\saktivi\w+", "\w{,2}vykomuni\w+", "vymalováno", "z důvodu", "z našich daní", "z pochopitelných důvodů", "zainvestov\w+", "\w{,3}zajímav\w+", "zelen\w+ razítk\w+", "ztrá\w{1,4}\sna\sživotech", "želíz\w+\sv\sohni"]
-typochyby = ["\.\.\.", "--", "\d{1,8}-?ti\w{,10}", "\d{1,12}x", "\"\w{1,}", "\w{1,}[\.,\?!]?\"", ",[^\W\d_]{1,12}", "\w{1,12}\'"]
-kontextovky = ["[\s\S]{25}kvůli[\s\S]{44}", "[\s\S]{25}díky[^!,\.\w][\s\S]{44}", "[\s\S]{24}\sšanc[\s\S]{45}", "[\s\S]{24}\sČech[\s\S]{45}", "[\s\S]{25}Holandsk[\s\S]{41}", "[\s\S]{25}Holanďan[\s\S]{41}"]
-
-# Načtení souboru
+# Načtení souboru s textem
 
 file = open(sys.argv[1], encoding="utf8") # otevře soubor volaný argumentem z příkazové řádky
 content = file.read() # načte obsah souboru
+
+# Načtení slovníků
+
+ptydepe = open(os.path.join("slovniky", "ptydepe.txt"), "r", encoding="utf8") # otevře soubor se seznamem zakázaných výrazů
+ptydepe = ptydepe.read().splitlines() # načte obsah souboru po řádcích jako seznam, bez přidávání \n na konec každé položky
+typochyby = open(os.path.join("slovniky", "typochyby.txt"), "r", encoding="utf8")
+typochyby = typochyby.read().splitlines()
+kontextovky = open(os.path.join("slovniky", "kontextovky.txt"), "r", encoding="utf8")
+kontextovky = kontextovky.read().splitlines()
+
+# Přidání a odebrání uživatelských slovníků
+
+if os.path.exists(os.path.join("slovniky", "ptydepe_pridej.txt")):
+	ptydepepridej = open(os.path.join("slovniky", "ptydepe_pridej.txt"), "r", encoding="utf8") # otevře soubor s výrazy, které hodlá uživatel(ka) extra hledat
+	ptydepepridej = ptydepepridej.read().splitlines()
+	ptydepe = ptydepe + ptydepepridej
+
+if os.path.exists(os.path.join("slovniky", "ptydepe_odeber.txt")):
+	ptydepeodeber = open(os.path.join("slovniky", "ptydepe_odeber.txt"), "r", encoding="utf8") # otevře soubor s výrazy, které uživatel(ka) hodlá tolerovat
+	ptydepeodeber = ptydepeodeber.read().splitlines()
+	ptydepe = [x for x in ptydepe if x not in ptydepeodeber]
 
 # Konverze formátu
 
@@ -107,7 +123,7 @@ nalezenekontextovky = sum(nalezenekontextovky, []) # vymaže prázdné subsety
 
 # Výpis
 
-print ("*** KIKI POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
+print ("*** KIKI v 0.2 POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
 print (titulek, "\n- titulek:", len(titulek), "znaků s mezerami\n- dokument:", pocetznaku, "znaků s mezerami,", pocetslov, "slov,", ns, "NS,", minutycteni, "min čtení\n")
 print ("Nejdelší slovo:\n- " + str(nejdelsislovo) + " (" + str(nejdelsislovodelka) + " znaků)\n")
 if nejdelsivetaznaky > 160:
