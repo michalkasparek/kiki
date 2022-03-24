@@ -2,7 +2,7 @@
 """
 Skript upozorňuje na stylistické nedostatky (českých) textů.
 
-__version__ = "0.2.1"
+__version__ = "0.3"
 __author__ = "Michal Kašpárek"
 __email__ = "michal.kasparek@gmail.com"
 __license__ = "MIT"
@@ -17,13 +17,27 @@ import nltk # tokenizace do vět
 
 # Načtení souboru s textem
 
-file = open(sys.argv[1], encoding="utf8") # otevře soubor volaný argumentem z příkazové řádky
-content = file.read() # načte obsah souboru
+try:
+	dokument = open(sys.argv[1], mode="r", encoding="utf-8") # otevře soubor volaný argumentem z příkazové řádky
+	obsah = dokument.read() # načte obsah souboru
+except UnicodeDecodeError: 
+	dokument = open(sys.argv[1], mode="r") # pro txt uložené v libre docs s jiným kódováním
+	obsah = dokument.read()
+except FileNotFoundError:
+	print ("Soubor nenalezen.")
+	quit()
 
 # Načtení slovníků
 
 ptydepe = open(os.path.join("slovniky", "ptydepe.txt"), "r", encoding="utf8") # otevře soubor se seznamem zakázaných výrazů
 ptydepe = ptydepe.read().splitlines() # načte obsah souboru po řádcích jako seznam, bez přidávání \n na konec každé položky
+notokboomervstup = open(os.path.join("slovniky", "notokboomer.txt"), "r", encoding="utf8")
+notokboomervstup = notokboomervstup.read().splitlines()
+notokboomer = {} # vytvoří prázdný slovník pro zastaralé obraty
+for line in notokboomervstup:
+	key = line.split(";")[0] # načte z každé řádky obsah před středníkem (regex s různými tvary spojení)
+	value = line.split(";")[1] # a obsah za středníkem (vysvětlení, proč je spojení blbě)
+	notokboomer[key] = value # přidá je do slovníku jako klíč a hodnotu
 typochyby = open(os.path.join("slovniky", "typochyby.txt"), "r", encoding="utf8")
 typochyby = typochyby.read().splitlines()
 kontextovky = open(os.path.join("slovniky", "kontextovky.txt"), "r", encoding="utf8")
@@ -43,7 +57,7 @@ if os.path.exists(os.path.join("slovniky", "ptydepe_odeber.txt")):
 
 # Konverze formátu
 
-html = markdown(content) # převede markdown na html
+html = markdown(obsah) # převede markdown na html
 plaintext = re.sub("<(/)?br(/)?>", "\n", html) # odstraní z html tag <br> a nahradí ho zalomením řádky
 plaintext = re.sub("<[^>]*>", "", plaintext) # odstraní z html ostatní tagy
 plaintextoneline = re.sub ("\n", " ", plaintext) # verze na jedné řádce, bude se hodit pro hledání kontextovek
@@ -51,7 +65,7 @@ titulek = plaintext.partition('\n')[0] # vybere první řádek jako titulek (pro
 
 # Počet slov a nejdelší slovo
 
-slova = re.sub("https?:\/\/\S*", "", plaintext) # odstraní všechny url adresy
+slova = re.sub("(https?:\/\/\S*|www.\\S*)", "", plaintext) # odstraní všechny url adresy
 slova = re.sub("[,\.:;!?„“…'\"\']", "", slova) # vymaže interpunkci
 slova = re.sub("(-|–|—)", " ", slova) # dlouhá-sousloví se nebudou počítat jako jedno slovo
 slova = slova.split() # rozdělí předchystaný obsah na slova
@@ -64,15 +78,36 @@ minutycteni = round(pocetslov/200) # průměrný čtenář přečte za minutu 20
 nejdelsislovo = max(slova, key=len) # najde nejdelší slovo
 nejdelsislovodelka = len(nejdelsislovo) # počet znaků v nejdelším slově
 
-# Nejdelší věta
+# Rozdělení do vět
 
 sentences = re.sub("[„“]", "", plaintext) # odstraní uvozovky
 sentences = re.sub("\s+\n", "\n", sentences) # odstraní mezery z konců odstavců
 sentences = re.sub("(\w)\n", "\\1.\n", sentences) # doplní tečku za neohraničené odstavce (např. mezititulky)
 sentences = nltk.sent_tokenize(sentences) # tokenizuje předchystaný obsah na věty
+
+# Nejdelší věta
+
 nejdelsiveta = max(sentences, key=len) # najde nejdelší větu
 nejdelsivetaznaky = len(nejdelsiveta) # počet znaků v nejdelší větě
 nejdelsivetaslova = len(nejdelsiveta.split()) # počet slov v nejdelší větě
+
+# Souvětí s nejvíce vztažnými zájmeny
+
+vztaznazajmena = {} # vytvoří prázdný slovník
+for x in sentences:
+	pocetzajmen = x.count(" kter") + x.count(", jenž ") + x.count(", jež ") + x.count(", jehož") + x.count (", jemuž") + x.count(", jejímž") + x.count(", jejž") + x.count(", co ")
+	vztaznazajmena[x] = pocetzajmen # přidá do slovníku větu a hodnotu
+nejviczajmen = max(vztaznazajmena, key=vztaznazajmena.get) # vybere ze slovníku větu s nejvyšší hodnotou
+pocetzajmen = max(vztaznazajmena.values()) # uloží do proměnné počet nalezených vztažných zájmen v rekordní větě
+
+# Souvětí s nejvíce interpunkčními znaménky
+
+carkyvevetach = {}
+for x in sentences:
+	carky = x.count(", ") + x.count("; ") + x.count(" – ") + x.count(" - ") + x.count(": ") + x.count("(") + x.count(")")
+	carkyvevetach[x] = carky # přidá do slovníku větu a hodnotu
+nejviccarek = max(carkyvevetach, key=carkyvevetach.get) # vybere ze slovníku větu s nejvyšší hodnotou
+pocetcarek = max(carkyvevetach.values()) # uloží do proměnné počet který v nejdelší větě
 
 # Slova za uvozovkami
 
@@ -87,6 +122,14 @@ nalezeneptydepe = [] # vytvoří prázdný seznam pro nalezené chyby
 for ptydepe in ptydepe: # jedna chyba za druhou
 	nalezenachyba = re.findall(ptydepe, plaintext, re.IGNORECASE) # vyhledá všechny výskyty chyb
 	nalezeneptydepe.append(nalezenachyba) # každou nalezenou chybu doplní do seznamu
+
+# Not ok boomer
+
+nalezeneboomerstiny = []
+for key, value in notokboomer.items():
+	nalezenaboomerstina = re.findall(key, plaintext, re.IGNORECASE)
+	if nalezenaboomerstina:
+		nalezeneboomerstiny.append(value)
 
 # Jedno slovo dvakrát po sobě
 
@@ -123,29 +166,36 @@ nalezenekontextovky = sum(nalezenekontextovky, []) # vymaže prázdné subsety
 
 # Výpis
 
-print ("*** KIKI v 0.2.1 POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
-print (titulek, "\n- titulek:", len(titulek), "znaků s mezerami\n- dokument:", pocetznaku, "znaků s mezerami,", pocetslov, "slov,", ns, "NS,", minutycteni, "min čtení\n")
-print ("Nejdelší slovo:\n- " + str(nejdelsislovo) + " (" + str(nejdelsislovodelka) + " znaků)\n")
-if nejdelsivetaznaky > 160:
-	print ("Nejdelší věta:\n- " + str(nejdelsiveta) + " ("+ str(nejdelsivetaslova) + " slov, " + str(nejdelsivetaznaky) + " znaků)\n")
-if len(slovapouvozovkach)!= 0:
-	print ("Pořadí slov po citacích:")
-	print ("-", ", ".join(slovapouvozovkach), "\n")
+print ("*** KIKI v 0.3 POMÁHÁ S EDITOVÁNÍM {-_-} ***\n")
+print (titulek, "\n- titulek:", len(titulek), "znaků s mezerami\n- dokument:", pocetznaku, "znaků s mezerami,", pocetslov, "slov,", ns, "NS,", minutycteni, "min čtení")
+print ("\nNejdelší slovo:\n- " + str(nejdelsislovo) + " (" + str(nejdelsislovodelka) + " znaků)")
+print ("\nNejdelší věta:\n- " + str(nejdelsiveta) + " ("+ str(nejdelsivetaslova) + " slov, " + str(nejdelsivetaznaky) + " znaků)")
+if pocetcarek > 3:
+	print ("\nVěta s nejvíce interpunkčními znaménky:\n- " + str(nejviccarek) + " (" + str(pocetcarek) + "×)")
+if pocetzajmen > 1:
+	print ("\nVěta s nejvíce vztažnými zájmeny:\n- " + str(nejviczajmen) + " (" + str(pocetzajmen) + "×)")
+if len(slovapouvozovkach) != 0:
+	print ("\nPořadí slov po citacích:")
+	print ("-", ", ".join(slovapouvozovkach))
 if len(nalezeneptydepe) != 0:
-	print ("Problematická slova a obraty:")
-	print ("-", ", ".join(nalezeneptydepe), "\n")
-if len(opakovani) != 0:
-	print ("Zduplikovaná slova:")
-	print ("-", ", ".join(opakovani), "\n")
-if len(nalezenetypochyby) != 0:
-	print ("Typografické chyby:")
-	for x in nalezenetypochyby:
+	print ("\nZlá, ošklivá slůvka:")
+	print ("-", ", ".join(nalezeneptydepe))
+if len(nalezeneboomerstiny) != 0:
+	print ("\nNot OK boomer:")
+	for x in nalezeneboomerstiny:
 		print ("-", x)
-	print ("Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×\n")
-if len(uvozovky) != 0:
-	print ("Termity v uvozovkách:")
-	print ("-", ", ".join(uvozovky), "\n")
 if len(nalezenekontextovky) != 0:
-	print ("Pohlídat význam:           ▼")
+	print ("\nPohlídat význam:           ▼")
 	for x in nalezenekontextovky:
 		print ("-", x)
+if len(opakovani) != 0:
+	print ("\nZduplikovaná slova:")
+	print ("-", ", ".join(opakovani))
+if len(nalezenetypochyby) != 0:
+	print ("\nTypografické chyby:")
+	for x in nalezenetypochyby:
+		print ("-", x)
+	print ("Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×")
+if len(uvozovky) != 0:
+	print ("\nTermity v uvozovkách:")
+	print ("-", ", ".join(uvozovky))

@@ -32,7 +32,6 @@ jak\w?\spo\smásle
 \w{,3}kontrover\w+
 kostliv\w+\sskřín\w+
 křišťálov\w+\skoul\w+
-lesbičk\w+
 kudy běží zajíc
 kultovn\w+
 kvituji
@@ -60,12 +59,13 @@ n\wž\w{1,2}\sna\skrk\w?
 o čem přemýšlet
 olej do ohně
 ostře kritiz\w+
-ostr\w+ kritik\w+
+ostr\w+\skritik\w+
 paradigm\w+
 part\w+\snadšenců
 platform\w+
 pod taktovkou
 pojďme
+potencionáln\w*
 posvě\w+
 prask\w+\sve\sšvech
 projekt\w{,3}
@@ -95,7 +95,7 @@ v pravý čas
 v průběhu
 v rámci
 v současnosti
-větší\w* jak[^\w]
+větší\w*\sjak[^\w]
 víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
 vlastně
