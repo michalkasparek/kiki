@@ -19,6 +19,8 @@ Kiki pouze _pomáhá_, ale needituje. Soubor s textem otevírá jen pro čtení,
 
 Ke spuštění skriptu potřebujete mít nainstalovaný Python, k němu ještě knihovny ```nltk``` a ```markdown``` (```pip install nltk``` a ```pip install markdown```).
 
+Skript ```Kiki.py``` a složku se slovníky stáhněte, kam potřebujete.
+
 V konzoli nebo terminálu použijte příkaz:
 
     .\kiki.py název_souboru_s_textem
