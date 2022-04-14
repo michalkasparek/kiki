@@ -2,14 +2,16 @@
 
 Skript pomáhá odhalovat stylistické nedostatky (českých) textů. Napsal jsem ho, aby mi asistoval při editování zpravodajských a publicistických článků, hodit se ale může i při finišování diplomky nebo románu.
 
+![Screenshot Kiki](https://michalkasparek.cz/img/kiki_screen.png)
+
 Co přesně umí:
 
 - Upozorňuje na klišé. Poradí si i s různými časy a tvary, neunikne mu _kostlivec ve skříni_ ani _kostlivci ve skříních_. U některých zastaralých, zavádějících nebo nekorektních termínů připojuje vysvětlení a alternativu (_globální oteplování_ → _změna klimatu_).
 - Vypisuje slova následující po přímé řeči. Odhaluje tak opakování typu _prozradil – neprozradil – prozradil_.
 - Hledá zduplikovaná slova (_jak řekl řekl_).
 - Ukazuje termíny v uvozovkách (uvozovky jsou pro strašpytly).
-- Vypichuje nejdelší větu (obvykle ji jde zkrátit) plus věty s nejvíce interpunkčními znaménky a nejvíce opakováním zájmen který/která/které.
-- Upozorňuje na nevhodně použitá interpunkční znaménka.
+- Vypichuje nejdelší větu (obvykle ji jde zkrátit), věty s nejvíce interpunkčními znaménky a nejvíce vztažnými zájmeny.
+- Upozorňuje na (některá) nevhodně použitá interpunkční znaménka.
 - Zobrazuje úseky, ve kterých se objevují slova často používaná v nesprávném významu (_díky_, _Čechy_ nebo _Holandsko_).  
 - Počítá základní statistiky, jako je rozsah a odhadovaná doba čtení.
 
@@ -17,35 +19,35 @@ Kiki pouze _pomáhá_, ale needituje. Soubor s textem otevírá jen pro čtení,
 
 ## Použití
 
-Ke spuštění skriptu potřebujete mít nainstalovaný Python, k němu ještě knihovny ```nltk``` a ```markdown``` (```pip install nltk``` a ```pip install markdown```).
+Ke spuštění skriptu je zapotřebí mít [nainstalovaný Python 3](https://naucse.python.cz/lessons/beginners/install/), k němu ještě knihovny ```markdown``` a ```tkinter``` (```pip install markdown``` + ```pip install tk```).
 
-Skript ```Kiki.py``` a složku se slovníky stáhněte, kam potřebujete.
+Složku se skriptem a slovníky si stáhněte, kam potřebujete. Nebo naklonujte repozitář.
 
-V konzoli nebo terminálu použijte příkaz:
+Kiki se spouští z příkazové řádky nebo z terminálu Pythonu. Pro práci v jednoduchém grafickém rozhraní (funguje na Windows 11 a Debianu, na macOS zatím bez testu) zavolejte skript bez argumentů:
 
-    .\kiki.py název_souboru_s_textem
+    python kiki.py
 
-nebo:
+Také lze výpis zobrazit přímo v terminálu – stačí jako argument zadat cestu k souboru s textem:
 
-    python kiki.py název_souboru_s_textem
-  
+    python kiki.py cesta_k_dokumentu
+
 Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s markdownem.
 
-Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný řádek do nového souboru _ptydepe_pridej.txt_ ve složce _slovniky_. Podobně lze postupovat, když vám některé hledané fráze nevadí: vytvořte pro ně soubor _ptydepe_odeber.txt_. Jen pozor: frázi do něj musíte vložit přesně ve tvaru, v jakém se nachází v hlavním slovníku.
+Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný řádek do nového souboru _ptydepe_pridej.txt_ ve složce ```slovniky```. Podobně lze postupovat, když vám některé hledané fráze nevadí: vytvořte pro ně soubor ```ptydepe_odeber.txt```. Jen pozor: frázi do něj musíte vložit přesně ve tvaru, v jakém se nachází v hlavním slovníku.
 
 Samozřejmě můžete zasahovat i přímo do hlavních slovníků, to se ale po aktualizacích poprdíte.
 
 ## Co je nového
 
+- 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída – Kiki lze snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)
 - 0.3: Hledání vět s nejvíce interpunkčními znaménky a nejvíckrát opakujích zájmeno „kter*“. Upozorňování na zastaralé nebo nekorektní fráze s vysvětlením. (25. 3. 2022)
 - 0.2: Seznamy frází už se načítají ze samostatných souborů ve složce _slovniky_. Tamtéž lze do souborů _ptydepe_pridej.txt_ a _ptydepe_odeber.txt_ vložit vlastní řetězce a regulérní výrazy, které má Kiki extra hledat, nebo naopak ignorovat. (22. 2. 2022)
 
 ## Co je v plánu
 
-- Průběžné rozšiřování seznamů frází.
 - Další upozornění: nejednotný sloh, opakující se začátky odstavců aj.
 - Podpora YAML záhlaví markdownových souborů.
-- Refaktorování: zbavit se závislosti na knihovnách _nltk_ a _markdown_, napsat funkce volatelné z jiných skriptů.
+- Průběžné rozšiřování seznamů frází.
 - [možná] Podpora formátů OpenDocument a Docx.
 - [možná] Spustitelný soubor pro Windows a macOS.
 
