@@ -3,7 +3,7 @@ schizofr\w+;Slova „schizofrenie“ nebo „schizofrenní“ by se měla použ�
 sex\w+\sharaš\w+;Neexistuje „sexuální harašení“, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
 lesbičk\w+;Nejsou to „lesbičky“, ale „lesby“.
 Eskymá\w+;„Eskymáci“ jsou zastaralé pojmenování s pejorativním nádechem. Jeho nejlepší náhradou bývá uvést konkrétní národ.
-Křová[ck]\w+;„Křováci“ jsou zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
+Křová[ck];„Křováci“ jsou zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
 hysterick\w+;Obecně není dobrý nápad označovat kohokoliv nebo cokoliv za hysterické.
 vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS-CoV-2. 
 (Merkelov[áéo]|Leyenov[áéo]|Williamsov[áéoy]|Harrisov[áé]|Lagardov[áé]|Gatesová|Albrightov\w+|Clintonov[áéo]|Obamov[áé]|Pelosiov\w+);Je nutné přechylovat cizí příjmení?

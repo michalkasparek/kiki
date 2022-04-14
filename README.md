@@ -2,7 +2,7 @@
 
 Skript pomáhá odhalovat stylistické nedostatky (českých) textů. Napsal jsem ho, aby mi asistoval při editování zpravodajských a publicistických článků, hodit se ale může i při finišování diplomky nebo románu.
 
-![Screenshot Kiki](https://michalkasparek.cz/img/kiki_screen.png)
+![Screenshot Kiki](https://michalkasparek.cz/img/kiki_screen3.png)
 
 Co přesně umí:
 
@@ -59,7 +59,7 @@ Modul Not ok boomer čerpá mimo jiné z manuálu [Jak mluvit a psát o lidech s
 
 ## Věnování
 
-Kiki jsem pojmenoval po své manželce [Kristýně](https://www.linkedin.com/in/krist%C3%BDna-ka%C5%A1p%C3%A1rkov%C3%A1-a733131ba/?originalSubdomain=cz), výjimečně pozorné a pečlivé editorce.
+Kiki jsem pojmenoval po své manželce [Kristýně](https://www.linkedin.com/in/krist%C3%BDna-ka%C5%A1p%C3%A1rkov%C3%A1-a733131ba/), výjimečně pozorné a pečlivé editorce.
 
 ## Kontakt
 
