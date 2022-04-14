@@ -2,7 +2,7 @@
 
 Skript pomáhá odhalovat stylistické nedostatky (českých) textů. Napsal jsem ho, aby mi asistoval při editování zpravodajských a publicistických článků, hodit se ale může i při finišování diplomky nebo románu.
 
-![Screenshot Kiki](https://michalkasparek.cz/img/kiki_screen.png)
+![Screenshot Kiki](https://michalkasparek.cz/img/kiki_screen2.png)
 
 Co přesně umí:
 
