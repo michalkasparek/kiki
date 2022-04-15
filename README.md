@@ -23,7 +23,7 @@ Ke spuštění skriptu je zapotřebí mít [nainstalovaný Python 3](https://nau
 
 Složku se skriptem a slovníky si stáhněte, kam potřebujete. Nebo naklonujte repozitář.
 
-Kiki se spouští z příkazové řádky nebo z terminálu Pythonu. Pro práci v jednoduchém grafickém rozhraní (funguje na Windows 11 a Debianu, na macOS zatím bez testu) zavolejte skript bez argumentů:
+Kiki se spouští z příkazové řádky nebo z terminálu Pythonu. Pro práci v jednoduchém grafickém rozhraní (funguje na Windows 11 a Xubuntu, na macOS zatím bez testu) zavolejte skript bez argumentů:
 
     python kiki.py
 
@@ -33,13 +33,11 @@ Také lze výpis zobrazit přímo v terminálu – stačí jako argument zadat c
 
 Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s markdownem.
 
-Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný řádek do nového souboru _ptydepe_pridej.txt_ ve složce ```slovniky```. Podobně lze postupovat, když vám některé hledané fráze nevadí: vytvořte pro ně soubor ```ptydepe_odeber.txt```. Jen pozor: frázi do něj musíte vložit přesně ve tvaru, v jakém se nachází v hlavním slovníku.
-
-Samozřejmě můžete zasahovat i přímo do hlavních slovníků, to se ale po aktualizacích poprdíte.
+Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný řádek do nového souboru ```ptydepe_pridej.txt``` ve složce ```slovniky```. Podobně lze postupovat, když vám některé hledané fráze nevadí: vytvořte pro ně soubor ```ptydepe_odeber.txt```. Jen pozor: frázi do něj musíte vložit přesně ve tvaru, v jakém se nachází v hlavním slovníku.
 
 ## Co je nového
 
-- 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída – Kiki lze snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)
+- 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída, takže lze Kiki snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)
 - 0.3: Hledání vět s nejvíce interpunkčními znaménky a nejvíckrát opakujích zájmeno „kter*“. Upozorňování na zastaralé nebo nekorektní fráze s vysvětlením. (25. 3. 2022)
 - 0.2: Seznamy frází už se načítají ze samostatných souborů ve složce _slovniky_. Tamtéž lze do souborů _ptydepe_pridej.txt_ a _ptydepe_odeber.txt_ vložit vlastní řetězce a regulérní výrazy, které má Kiki extra hledat, nebo naopak ignorovat. (22. 2. 2022)
 
