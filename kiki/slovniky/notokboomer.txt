@@ -1,14 +1,14 @@
-globál\w+ otepl\w+;„Globální oteplování“ je zavádějící pojmenování: nárůst průměrných teplot je jen jedním z projevů změn klimatu, vedle například extrémních lokálních ochlazení. Lepší bývá použít právě „změna klimatu“ nebo „změny klimatu“, případně „klimatická krize“.
+globál\w+\sotepl\w+;Jde o zavádějící pojmenování, protože nárůst průměrných teplot je jen jedním z projevů změn klimatu, vedle například extrémních lokálních ochlazení. Lepší bývá použít právě „změna klimatu“ nebo „změny klimatu“, případně „klimatická krize“.
 schizofr\w+;Slova „schizofrenie“ nebo „schizofrenní“ by se měla používat čistě v přímé souvislosti se specifickou duševní poruchou, která navzdory rozšířeným předsudkům nespočívá v rozpolcení mysli. Metaforická použití lze nahradit právě „rozpolceností“ a podobnými slovy.
-sex\w+\sharaš\w+;Neexistuje „sexuální harašení“, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
+sex\w+\sharaš\w+;Nic takového neexistuje, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
 lesbičk\w+;Nejsou to „lesbičky“, ale „lesby“.
-Eskymá\w+;„Eskymáci“ jsou zastaralé pojmenování s pejorativním nádechem. Jeho nejlepší náhradou bývá uvést konkrétní národ.
-Křová[ck];„Křováci“ jsou zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
-hysterick\w+;Obecně není dobrý nápad označovat kohokoliv nebo cokoliv za hysterické.
+Eskymá\w+;Zastaralé pojmenování s pejorativním nádechem. Jeho nejlepší náhradou bývá uvést konkrétní národ.
+Křová[ck];Zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
+hysterick\w+;Obecně není dobrý nápad tak označovat kohokoliv nebo cokoliv.
 vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS-CoV-2. 
-(Merkelov[áéo]|Leyenov[áéo]|Williamsov[áéoy]|Harrisov[áé]|Lagardov[áé]|Gatesová|Albrightov\w+|Clintonov[áéo]|Obamov[áé]|Pelosiov\w+);Je nutné přechylovat cizí příjmení?
-(Wachowš\w+|Larry\w*\sWachow\w+|Andy\w*\sWachow\w+|Bradley\w*\s\w*\s*Manning\w*|Ellen\w*\sPage\w*);V textu se vyskytuje jméno používané trans člověkem před tranzicí. Říká se tomu deadnaming a je to déclassé.
-(vozíčkář\w+|autist[ayůo]|invalid[ayo]|neslyš|hluchoněm\w+|nevidom\w+);Veřejný ochránce lidských práv doporučuje nepoužívat jednoslovné výrazy spojené s postižením jako „autista“ či „vozíčkář“. Lze je nahradit opisy „člověk, který je…“ nebo „člověk s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
+(Wachowš\w+|Larry\w*\sWachow\w+|Andy\w*\sWachow\w+|Bradley\w*\s\w*\s*Manning\w*|Ellen\w*\sPage\w*);Označování trans osoby jménem, které používala před tranzicí, se říká deadnaming a je to hrubě nevhodné.
+(vozíčkář\w+|autist[ayůo]|invalid[ayo]|neslyšíc|hluchoněm\w+|nevidom\w+);Veřejný ochránce lidských práv doporučuje nepoužívat jednoslovné výrazy spojené s postižením. Lze je nahradit opisy „člověk, který je…“ nebo „člověk s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
 (zdravotně|tělesně|duševně)\spostižen\w+;Veřejný ochránce lidských doporučuje místo o zdravotně, duševně či tělesně „postižených“ psát o „lidech s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
 znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk“.
 slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
+(Merkelov[áéo]|Leyenov[áéo]|Williamsov[áéoy]|Harrisov[áé]|Lagardov[áé]|Gatesová|Albrightov\w+|Clintonov[áéo]|Obamov[áé]|Pelosiov\w+);Pro někoho je přechylování cizích příjmení OK, pro někoho ne. Je to na vás.

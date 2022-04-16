@@ -12,10 +12,10 @@ __status__ = "Development"
 import tkinter as tk
 from kikiengine import Kiki
 
-def okno(ptydepe, typochyby, kontextovky, **notokboomer):
+def okno(ptydepe, typochyby, kontextovky, dublety, **notokboomer):
 
     vzkaz_nahore = "Sem přijde text článku"
-    vzkaz_dole = "Kiki\n\nhttps://github.com/michalkasparek/kiki"
+    vzkaz_dole = "Michal Kašpárek 2022\n\nAktualizace, návod, licence: https://github.com/michalkasparek/kiki\n\nKontakt: michal.kasparek@gmail.com"
 
     window = tk.Tk()
     window.title("Kiki pomáhá editovat")
@@ -24,7 +24,7 @@ def okno(ptydepe, typochyby, kontextovky, **notokboomer):
     def do_prace(*args):
         frame3.delete(1.0, tk.END)
         clanek = frame1.get(1.0, tk.END)
-        mujclanek = Kiki(clanek, ptydepe, typochyby, kontextovky, **notokboomer)
+        mujclanek = Kiki(clanek, ptydepe, typochyby, kontextovky, dublety, **notokboomer)
         frame3.insert(tk.END, mujclanek.kompletni_vypis)
 
     def vymaz(*args):
