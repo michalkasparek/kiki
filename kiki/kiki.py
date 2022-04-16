@@ -16,8 +16,6 @@ from kikiokno import okno
 
 # Načtení slovníků
 
-os.chdir(os.path.dirname(sys.argv[0])) # pracovní adresář = adresář s kiki.py
-
 with open(os.path.join("slovniky", "ptydepe.txt"), "r", encoding="utf-8") as ptydepe:
 	ptydepe = ptydepe.read().splitlines()
 with open(os.path.join("slovniky", "notokboomer.txt"), "r", encoding="utf-8") as notokboomer_vstup:
