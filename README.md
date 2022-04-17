@@ -23,15 +23,17 @@ Kiki je sice pythonovský skript, k používání ale není nutné znát Python 
 
 Ke spuštění skriptu je zapotřebí mít [nainstalovaný Python 3](https://naucse.python.cz/lessons/beginners/install/), k němu ještě knihovny ```markdown``` a ```tkinter``` (```pip install markdown``` + ```pip install tk```).
 
-Složku se skriptem a slovníky si stáhněte, kam potřebujete. Nebo naklonujte repozitář ```git clone http://github.com/michalkasparek/Kiki```:
+Složku se skriptem a slovníky si stáhněte, kam potřebujete. Nebo naklonujte repozitář: 
+
+    git clone http://github.com/michalkasparek/kiki
 
 Pro práci v jednoduchém grafickém rozhraní (funguje na Windows 11 a Xubuntu, na macOS zatím bez testu) zavolejte skript bez argumentů:
 
-    python (cesta_ke_kiki)\kiki.py
+    python kiki.py
 
 Výpis lze také zobrazit přímo v terminálu – stačí jako argument zadat cestu k souboru s textem:
 
-    python (cesta_ke_kiki)\kiki.py (cesta_k_dokumentu\)nazev_dokumentu.txt
+    python kiki.py (cesta_k_dokumentu\)nazev_dokumentu.txt
 
 Kiki si rozumí s prostým textem (například vykopírovaným z Wordu nebo GDocs) i s [markdownem](https://www.lifehacky.cz/oda-na-markdown-co-to-vlastne-je-a-proc-se-bez-nej-neobejdete/).
 
@@ -46,11 +48,11 @@ Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný �
 
 ## Co je v plánu
 
-- Další upozornění: nejednotný sloh, opakující se začátky odstavců aj.
+- Další upozornění: opakující se začátky odstavců, chyby v zápisu čísel a v užití pomlček.
 - Podpora YAML záhlaví markdownových souborů.
 - Průběžné rozšiřování seznamů frází.
 - [možná] Podpora formátů OpenDocument a Docx.
-- [možná] Spustitelný soubor pro Windows a macOS.
+- [možná] Spustitelné soubory pro Windows a macOS.
 
 ## Zdroje
 
