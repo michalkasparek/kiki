@@ -3,9 +3,9 @@
 """
 Skript obsahuje:
 1/ Funkci rozsekej_po_vetach pro rozdělení (českého) textu do vět. Bere do úvahy akademické tituly 
-a některé další chytáky. Je optimalizovaná pro nalezení nejdelší, nikoliv nejkratší věty v textu 
+a některé další chytáky. Je testovaná pro nalézání nejdelší, nikoliv nejkratší věty v textu 
 a práci si ulehčuje drobnými, ale efektivními podfuky, např. odstraněním uvozovek. Nelze ji proto 
-využít tam, kde je nutná maximální přesnost a věrnost.
+využít tam, kde je nutná absolutní spolehlivost.
 2/ Třídu Kiki s metodami pro stylistickou analýzu (českých) textů.
 
 __author__ = "Michal Kašpárek"
@@ -26,6 +26,7 @@ def rozsekej_po_vetach(k_rozsekani):
     vety = re.sub("(\w)\n", "\\1.\n", vety) # doplní tečku na konec řádků končíčích písmenem/číslem
     vety = re.sub("\s\s+", " ", vety) # odstranění dvojtých mezer, mezer na koncích řádků atd.
     vety = re.sub("(?<=[\.\!\?…])"+neni_konec_vety+"\s(?=([A-Z]|[ÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ\(]))", "\n", vety)
+    vety = re.sub("(?<=[\.\!\?…]\))"+neni_konec_vety+"\s(?=([A-Z]|[ÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ\(]))", "\n", vety)
     vety = re.sub("(?<=[\.\!\?…])"+neni_konec_vety+"\s[–-•]\s", "\n", vety)
     vety = re.sub("(?<=[a-ž][\.\!\?…])\s(?=\d+)", "\n", vety) # "odřenýma ušima. 28. listopadu jsem"
     vety = vety.splitlines()

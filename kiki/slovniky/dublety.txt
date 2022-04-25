@@ -34,6 +34,7 @@ rekurz\w*;rekurs\w*
 resort\w*;rezort\w*
 reverz\w*;revers\w*
 San\sFrancisc\w*;San\sFrancisk\w*
+šampion\w*;šampión\w*
 vitamín\w*;vitamin\w*
 vagón\w*;vagon\w*
 (?<=\s)víc;(?<=\s)více

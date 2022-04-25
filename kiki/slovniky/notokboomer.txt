@@ -11,4 +11,4 @@ vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS
 (zdravotně|tělesně|duševně)\spostižen\w+;Veřejný ochránce lidských doporučuje místo o zdravotně, duševně či tělesně „postižených“ psát o „lidech s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
 znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk“.
 slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
-(Merkelov[áéo]|Leyenov[áéo]|Williamsov[áéoy]|Harrisov[áé]|Lagardov[áé]|Gatesová|Albrightov\w+|Clintonov[áéo]|Obamov[áé]|Pelosiov\w+);Pro někoho je přechylování cizích příjmení OK, pro někoho ne. Je to na vás.
+w*\sv\ssukn(i|ích);Ponižující a k tomu otřepaná fráze.

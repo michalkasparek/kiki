@@ -1,15 +1,15 @@
 absolutn\w{1,3}\s\wjistot\w+
 ale\s\w+\sjim\stam\slidi
-asi tak všechno, co se s tím dá dělat
-asi tak všechno, co s tím můžeme dělat
+asi\stak\svšechno,\sco\sse\ss\stím\sdá\sdělat
+asi\stak\svšechno,\sco\ss\stím\smůžeme\sdělat
 (?<!\w)během
-bitv\w+\so\s\w+
+bitv\w+\so(?=\s\w+)
 bobřík\w{,3}
 brous\w+\szuby
 cel\w{1,3}\sřad\w{1,3}
 cel\w{,3}\sinterne\w{1,3}
-co se týče
-čas ukáže
+co\sse\stýče
+čas\sukáže
 časovan\w+\sbomb\w+
 časov\w+\shorizont\w+
 člověčenství
@@ -18,10 +18,10 @@ dál\w?\sprohl\w+
 daňov\w+\spoplatní\w+
 (?<!\w)dedik\w+
 (?<!\w)diskur\w+
-\w{,2}dojde\sk\s\w+
+\w{,2}dojde\sk(?=\s\w+)
 domác\w+\smazlíč\w+
 doslova
-\w{,2}došlo\sk\s\w+
+\w{,2}došlo\sk(?=\s\w+)
 drtiv\w+\světšin\w+
 druhak
 \w*financov\w+
@@ -32,38 +32,38 @@ jak\w?\spo\smásle
 \w{,3}kontrover\w+
 kostliv\w+\sskřín\w+
 křišťálov\w+\skoul\w+
-kudy běží zajíc
+kudy\sběží\szajíc
 kultovn\w+
 kvituji
 kvitova\w+
 lidsk\w+\sfakto\w+
 manuálw\+\szručn\w+
 medvědí\sslužb\w+
-modří už vědí
-mráz po zádech
+modří\suž\svědí
+mráz\spo\szádech
 muž\w+\szákona
-na dlouhou trať
-na kobereček
-na poli
-na půdě
-na pořadu dne
-na pravém místě
-na svém místě
-napříč spektrem
+na\sdlouhou\strať
+na\skobereček
+na\spoli
+na\spůdě
+na\spořadu\sdne
+na\spravém\smístě
+na\ssvém\smístě
+napříč\sspektrem
 narativ\w*
 následně
-nic snazšího
+nic\ssnazšího
 nepřizpůsobiv\w+
-nervy v kýblu
+nervy\sv\skýblu
 n\wž\w{1,2}\sna\skrk\w?
-o čem přemýšlet
-olej do ohně
-ostře kritiz\w+
+o\sčem\spřemýšlet
+olej\sdo\sohně
+ostře\skritiz\w+
 ostr\w+\skritik\w+
 paradigm\w+
 part\w+\snadšenců
 platform\w+
-pod taktovkou
+pod\staktovkou
 pojďme
 potencionáln\w*
 posvě\w+
@@ -74,13 +74,14 @@ prý
 přehrš\w+
 rasov\w+\spodtext\w*
 realiz\w+
-řečeno s klasikem
-s kůží na trh
+řečeno\ss\sklasikem
+s\skůží\sna\strh
 sněhov\w+\s\nadílk\w+
 státn\w+\skas\w{1,5}
 soubo\w+\stitánů
-svého času
-svým způsobem
+spanil\w+\sjízd\w+
+svého\sčasu
+svým\szpůsobem
 širok\w+\s\veřejnos\w+
 špičk\w{1,3}\sledovc+
 tah\w{,2}\sna\sbranku
@@ -89,12 +90,13 @@ třešničk\w+\sna\sdortu
 tuzemsk\w+
 údajně
 úheln\w+\sk\wmen\w*
-v neposlední řadě
-v podstatě
-v pravý čas
-v průběhu
-v rámci
-v současnosti
+v\sneposlední\sřadě
+v\spodstatě
+v\spravý\sčas
+v\sprůběhu
+v\srámci
+v\ssoučasnosti
+v\ssukn(i|ích)
 větší\w*\sjak[^\w]
 víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
@@ -102,11 +104,11 @@ vlastně
 volnočasov\w+\saktivi\w+
 \w{,2}vykomuni\w+
 vymalováno
-z důvodu
-z našich daní
-z pochopitelných důvodů
+z\sdůvodu
+z\snašich\sdaní
+z\spochopitelných\sdůvodů
 zainvestov\w+
 \w{,3}zajímav\w+
-zelen\w+ razítk\w+
+zelen\w+\srazítk\w+
 ztrá\w{1,4}\sna\sživotech
 želíz\w+\sv\sohni
