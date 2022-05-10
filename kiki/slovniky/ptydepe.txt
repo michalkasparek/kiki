@@ -2,7 +2,7 @@ absolutn\w{1,3}\s\wjistot\w+
 ale\s\w+\sjim\stam\slidi
 asi\stak\svšechno,\sco\sse\ss\stím\sdá\sdělat
 asi\stak\svšechno,\sco\ss\stím\smůžeme\sdělat
-(?<!\w)během
+[^\w]během
 bitv\w+\so(?=\s\w+)
 bobřík\w{,3}
 brous\w+\szuby
@@ -16,7 +16,8 @@ co\sse\stýče
 člověčin\w+
 dál\w?\sprohl\w+
 daňov\w+\spoplatní\w+
-(?<!\w)dedik\w+
+[^\w]dedik\w+
+dír\w+\sdo\světa
 (?<!\w)diskur\w+
 \w{,2}dojde\sk(?=\s\w+)
 domác\w+\smazlíč\w+
@@ -49,6 +50,7 @@ na\spůdě
 na\spořadu\sdne
 na\spravém\smístě
 na\ssvém\smístě
+nad\srozlitým\smlékem
 napříč\sspektrem
 narativ\w*
 následně
@@ -98,13 +100,14 @@ v\srámci
 v\ssoučasnosti
 v\ssukn(i|ích)
 větší\w*\sjak[^\w]
-víc\w*\sjak(?=\s)
+[^\w]víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
 vlastně
 volnočasov\w+\saktivi\w+
 \w{,2}vykomuni\w+
 vymalováno
 z\sdůvodu
+z\stoho\sdůvodu
 z\snašich\sdaní
 z\spochopitelných\sdůvodů
 zainvestov\w+
