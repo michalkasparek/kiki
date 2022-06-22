@@ -27,7 +27,7 @@ Složku se skriptem a slovníky si stáhněte, kam potřebujete. Nebo naklonujte
 
     git clone http://github.com/michalkasparek/kiki
 
-Pro práci v jednoduchém grafickém rozhraní (funguje na Windows 11 a Xubuntu, na macOS zatím bez testu) zavolejte skript bez argumentů:
+Pro práci v jednoduchém grafickém rozhraní (otestováno na Windows 11, macOS a Xubuntu, čili snad poběží všude) zavolejte skript bez argumentů:
 
     python kiki.py
 
@@ -41,7 +41,7 @@ Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný �
 
 ## Co je nového
 
-- 0.5: Hledání dubletů. Přehlednější výpis ptydepe a boomerštiny. (16. 4. 2022)
+- 0.5: Hledání dublet. Přehlednější výpis ptydepe a boomerštiny. (16. 4. 2022)
 - 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída, takže lze Kiki snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)
 - 0.3: Hledání vět s nejvíce interpunkčními znaménky a nejvíckrát opakujích zájmeno „kter*“. Upozorňování na zastaralé nebo nekorektní fráze s vysvětlením. (25. 3. 2022)
 - 0.2: Seznamy frází už se načítají ze samostatných souborů ve složce _slovniky_. Tamtéž lze do souborů _ptydepe_pridej.txt_ a _ptydepe_odeber.txt_ vložit vlastní řetězce a regulérní výrazy, které má Kiki extra hledat, nebo naopak ignorovat. (22. 2. 2022)
