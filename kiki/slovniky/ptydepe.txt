@@ -84,8 +84,8 @@ soubo\w+\stitánů
 spanil\w+\sjízd\w+
 svého\sčasu
 svým\szpůsobem
-širok\w+\s\veřejnos\w+
-špičk\w{1,3}\sledovc+
+širok\w+\sveřejnost\w+
+špičk\w{1,3}\sledovc\w+
 tah\w{,2}\sna\sbranku
 totiž
 třešničk\w+\sna\sdortu
