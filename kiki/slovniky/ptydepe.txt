@@ -27,6 +27,7 @@ drtiv\w+\světšin\w+
 druhak
 \w*financov\w+
 finančn\w+\sprostředk\w+
+gastronomic\w+\szážit\w+
 hlavní\w*\sprotagonist\w{1,4}
 jablk\w+\ssváru
 jak\w?\spo\smásle
