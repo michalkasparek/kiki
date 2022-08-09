@@ -11,4 +11,5 @@ vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS
 (zdravotně|tělesně|duševně)\spostižen\w+;Veřejný ochránce lidských doporučuje místo o zdravotně, duševně či tělesně „postižených“ psát o „lidech s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
 znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk“.
 slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
-w*\sv\ssukn(i|ích);Ponižující a k tomu otřepaná fráze.
+Stanfords\w+\suniv\w+;Správně je Stanfordova univerzita.
+Harvardsk\w+\suniv\w+;Správně je Harvardova univerzita.
