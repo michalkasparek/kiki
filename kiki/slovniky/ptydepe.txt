@@ -93,12 +93,14 @@ třešničk\w+\sna\sdortu
 tuzemsk\w+
 údajně
 úheln\w+\sk\wmen\w*
+v\sdnešní\sdobě
 v\sneposlední\sřadě
 v\spodstatě
 v\spravý\sčas
 v\sprůběhu
 v\srámci
 v\ssoučasnosti
+v\ssoučasné\sdobě
 v\ssukn(i|ích)
 větší\w*\sjak[^\w]
 [^\w]víc\w*\sjak(?=\s)

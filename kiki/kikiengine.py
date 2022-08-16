@@ -141,6 +141,20 @@ class Kiki:
             if kontextovka_vyskyt:
                 self.kontextovky_nalezene.append(kontextovka_vyskyt)
 				
+        # Nejdelší podkapitoly
+
+        self.podkapitoly = re.split("(\*\*\*|## )", surovy_vstup)
+        self.podkapitoly_prumer = sum(map(len, self.podkapitoly) ) / len(self.podkapitoly)
+        self.nejdelsi_podkapitola = max(self.podkapitoly, key=len)
+        self.nejdelsi_podkapitola_kolikrat = len(self.nejdelsi_podkapitola) / self.podkapitoly_prumer 
+        self.nejdelsi_podkapitola_kolikrat = "{:.2f}".format(self.nejdelsi_podkapitola_kolikrat).replace(".", ",")
+        self.nejdelsi_podkapitola = self.nejdelsi_podkapitola.strip()[0:48]
+        self.nejdelsi_podkapitola_komplet = f"{self.nejdelsi_podkapitola}… ({self.nejdelsi_podkapitola_kolikrat}× delší než průměr)"
+
+        if len(self.podkapitoly) < 3:
+            self.nejdelsi_podkapitola_komplet = ""
+
+
         # Úprava seznamů pro pěkný výstup
 
         self.ptydepe_nalezene = sorted(self.ptydepe_nalezene, key=len, reverse=True)
@@ -171,4 +185,5 @@ class Kiki:
 {nr}Typografické chyby:{nr}- {", ".join(self.typochyby_nalezene)} 
 Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
 {nr}Termity v uvozovkách:{nr}- {", ".join(self.uvozovky)} 
-{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}"""
+{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}
+{nr}Nejdelší podkapitola:{nr}- {self.nejdelsi_podkapitola_komplet}"""

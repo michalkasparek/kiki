@@ -1,4 +1,5 @@
 \d*\.\sstolet\w*;\w+(té|tém|tého|tým|tému)\sstolet\w+
+\d*\.\sl[é|e]t\w*;\w+(tých|tými)\sl[é|e]t\w*\w+
 acetylén\w*;acetylen\w*
 balón\w*;balon\w*
 basilik\w*;bazilik\w*
