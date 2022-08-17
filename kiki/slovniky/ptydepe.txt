@@ -29,6 +29,7 @@ druhak
 finančn\w+\sprostředk\w+
 gastronomic\w+\szážit\w+
 hlavní\w*\sprotagonist\w{1,4}
+\w+ilet\w+\s\výroč\w+
 jablk\w+\ssváru
 jak\w?\spo\smásle
 \w{,3}kontrover\w+

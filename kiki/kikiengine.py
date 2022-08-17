@@ -148,6 +148,7 @@ class Kiki:
         self.nejdelsi_podkapitola = max(self.podkapitoly, key=len)
         self.nejdelsi_podkapitola_kolikrat = len(self.nejdelsi_podkapitola) / self.podkapitoly_prumer 
         self.nejdelsi_podkapitola_kolikrat = "{:.2f}".format(self.nejdelsi_podkapitola_kolikrat).replace(".", ",")
+        self.nejdelsi_podkapitola = re.sub("\n", " ", self.nejdelsi_podkapitola)
         self.nejdelsi_podkapitola = self.nejdelsi_podkapitola.strip()[0:48]
         self.nejdelsi_podkapitola_komplet = f"{self.nejdelsi_podkapitola}… ({self.nejdelsi_podkapitola_kolikrat}× delší než průměr)"
 
@@ -170,20 +171,22 @@ class Kiki:
         nr = "\n"
         nr_odr = "\n- "
 
-        self.kompletni_vypis = f"""{self.titulek}
+        self.kompletni_vypis = f"""*** STRUKTURA ***{nr}
+{self.titulek}
 - titulek: {len(self.titulek)} znaků s mezerami
 - dokument: {self.pocet_znaku} znaků s mezerami, {self.pocet_slov} slov, {self.ns} NS, {self.minuty_cteni} min čtení
 {nr}Nejdelší slovo:{nr}- {self.nejdelsi_slovo} ({self.nejdelsi_slovo_delka} znaků)
 {nr}Nejdelší věta:{nr}- {self.nejdelsi_veta} ({self.nejdelsi_veta_slova} slov, {self.nejdelsi_veta_znaky} znaků)
 {nr}Věta s nejvíce interpunkčními znaménky:{nr}- {self.nejviccarek} ({self.pocetcarek}×)
 {nr}Věta s nejvíce vztažnými zájmeny:{nr}- {self.nejvic_zajmen} ({self.pocet_zajmen}×)
-{nr}Pořadí slov po citacích:{nr}- {", ".join(self.slova_po_uvozovkach)} 
+{nr}Nejdelší podkapitola:{nr}- {self.nejdelsi_podkapitola_komplet}
+Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
+{nr}*** SLOH ***
 {nr}Zlá, ošklivá slůvka:{nr}- {", ".join(self.ptydepe_pekne)} 
 {nr}Not OK boomer:{nr}- {nr_odr.join(self.boomerstiny_nalezene)} 
-{nr}Nejednotná forma:{nr}- {", ".join(self.dublety_nalezene)}
+{nr}Pořadí slov po citacích:{nr}- {", ".join(self.slova_po_uvozovkach)}
 {nr}Zduplikovaná slova slova:{nr}- {", ".join(self.opakovani)}
-{nr}Typografické chyby:{nr}- {", ".join(self.typochyby_nalezene)} 
-Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
+{nr}Nejednotná forma:{nr}- {", ".join(self.dublety_nalezene)}
 {nr}Termity v uvozovkách:{nr}- {", ".join(self.uvozovky)} 
-{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}
-{nr}Nejdelší podkapitola:{nr}- {self.nejdelsi_podkapitola_komplet}"""
+{nr}Typografické chyby:{nr}- {", ".join(self.typochyby_nalezene)} 
+{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}"""
