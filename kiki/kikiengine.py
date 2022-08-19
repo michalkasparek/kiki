@@ -180,7 +180,6 @@ class Kiki:
 {nr}Věta s nejvíce interpunkčními znaménky:{nr}- {self.nejviccarek} ({self.pocetcarek}×)
 {nr}Věta s nejvíce vztažnými zájmeny:{nr}- {self.nejvic_zajmen} ({self.pocet_zajmen}×)
 {nr}Nejdelší podkapitola:{nr}- {self.nejdelsi_podkapitola_komplet}
-Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
 {nr}*** SLOH ***
 {nr}Zlá, ošklivá slůvka:{nr}- {", ".join(self.ptydepe_pekne)} 
 {nr}Not OK boomer:{nr}- {nr_odr.join(self.boomerstiny_nalezene)} 
@@ -189,4 +188,5 @@ Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
 {nr}Nejednotná forma:{nr}- {", ".join(self.dublety_nalezene)}
 {nr}Termity v uvozovkách:{nr}- {", ".join(self.uvozovky)} 
 {nr}Typografické chyby:{nr}- {", ".join(self.typochyby_nalezene)} 
+Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
 {nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}"""

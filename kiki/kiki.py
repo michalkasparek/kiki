@@ -2,7 +2,7 @@
 """
 Nástroj pro editor(k)y (českých) textů
 
-__version__ = "0.5"
+__version__ = "0.6"
 __author__ = "Michal Kašpárek"
 __email__ = "michal.kasparek@gmail.com"
 __license__ = "MIT"

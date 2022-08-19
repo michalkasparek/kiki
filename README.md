@@ -41,6 +41,7 @@ Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný �
 
 ## Co je nového
 
+- 0.6: Hledání nejdelší podkapitoly. Rozdělení výpisu na strukturu a sloh. (19. 8. 2022)
 - 0.5: Hledání dublet. Přehlednější výpis ptydepe a boomerštiny. (16. 4. 2022)
 - 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída, takže lze Kiki snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)
 - 0.3: Hledání vět s nejvíce interpunkčními znaménky a nejvíckrát opakujích zájmeno „kter*“. Upozorňování na zastaralé nebo nekorektní fráze s vysvětlením. (25. 3. 2022)
