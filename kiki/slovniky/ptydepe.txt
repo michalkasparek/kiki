@@ -45,6 +45,7 @@ medvědí\sslužb\w+
 modří\suž\svědí
 mráz\spo\szádech
 muž\w+\szákona
+\smyslím\ssi,\sže
 na\sdlouhou\strať
 na\skobereček
 na\spoli
