@@ -1,9 +1,11 @@
 \d*\.\sstolet\w*;\w+(té|tém|tého|tým|tému)\sstolet\w+
 \d*\.\sl[é|e]t\w*;\w+(tých|tými)\sl[é|e]t\w*\w+
 acetylén\w*;acetylen\w*
+babušk\w+;bábušk\w+
 balón\w*;balon\w*
 basilik\w*;bazilik\w*
 benzín\w*;benzin\w*
+bloger\w*;blogger\w*
 disertac\w*;dizertac\w*
 diskurs\w*;diskurz\w*
 diskus\w*;diskuz\w*
@@ -15,11 +17,14 @@ gentleman\w*;džentlmen\w*
 Guiney;Guineje
 chalífát\w*;kalifát\w*
 impuls\w*;impulz\w*
+Janukovič\w*;Janukovyč\w*
 kamión\w*;kamion\w*
 kompars\w*;komparz\w*
 konkurs\w*;konkurz\w*
 (?<=\s)krom(?=\s);(?<=\s)kromě(?=\s)
 kurs\w*;kurz\w*
+lah[veí]\w+;láh[veí]\w+
+maršrut\w*;maršut\w*
 mechanism\w*;mechanizm\w*
 milion\w*;milión\w*
 (?<=\s)míň;(?<=\s)méně

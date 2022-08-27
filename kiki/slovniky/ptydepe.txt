@@ -48,7 +48,7 @@ muž\w+\szákona
 \smyslím\ssi,\sže
 na\sdlouhou\strať
 na\skobereček
-na\spoli
+na\spoli\s
 na\spůdě
 na\spořadu\sdne
 na\spravém\smístě
@@ -81,6 +81,7 @@ rasov\w+\spodtext\w*
 realiz\w+
 řečeno\ss\sklasikem
 s\skůží\sna\strh
+s\stím,\sže
 sněhov\w+\s\nadílk\w+
 státn\w+\skas\w{1,5}
 soubo\w+\stitánů
