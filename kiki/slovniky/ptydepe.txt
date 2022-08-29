@@ -68,6 +68,8 @@ ostr\w+\skritik\w+
 paradigm\w+
 part\w+\snadšenců
 platform\w+
+pod\srouškou\stmy
+pod\srouškou\snoci
 pod\staktovkou
 pojďme
 potencionáln\w*
@@ -86,6 +88,7 @@ sněhov\w+\s\nadílk\w+
 státn\w+\skas\w{1,5}
 soubo\w+\stitánů
 spanil\w+\sjízd\w+
+společensky\s\unav\w+
 svého\sčasu
 svým\szpůsobem
 širok\w+\sveřejnost\w+

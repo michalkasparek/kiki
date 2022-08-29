@@ -3,8 +3,8 @@ schizofr\w+;Slova „schizofrenie“ nebo „schizofrenní“ by se měla použ�
 sex\w+\sharaš\w+;Nic takového neexistuje, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
 lesbičk\w+;Nejsou to „lesbičky“, ale „lesby“.
 Eskymá\w+;Zastaralé pojmenování s pejorativním nádechem. Jeho nejlepší náhradou bývá uvést konkrétní národ.
-Křová[ck];Zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
-hysterick\w+;Obecně není dobrý nápad tak označovat kohokoliv nebo cokoliv.
+Křová[ck]\w*;Zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
+hyster\w+;Obecně není dobrý nápad tak označovat kohokoliv nebo cokoliv.
 vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS-CoV-2. 
 (Wachowš\w+|Larry\w*\sWachow\w+|Andy\w*\sWachow\w+|Bradley\w*\s\w*\s*Manning\w*|Ellen\w*\sPage\w*);Označování trans osoby jménem, které používala před tranzicí, se říká deadnaming a je to hrubě nevhodné.
 (vozíčkář\w+|autist[ayůo]|invalid[ayo]|neslyšíc|hluchoněm\w+|nevidom\w+);Veřejný ochránce lidských práv doporučuje nepoužívat jednoslovné výrazy spojené s postižením. Lze je nahradit opisy „člověk, který je…“ nebo „člověk s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
