@@ -46,3 +46,4 @@ vagón\w*;vagon\w*
 (?<=\s)víc;(?<=\s)více
 (?<=\s)nejvíc;(?<=\s)nejvíce
 wifi;wi-fi
+suši(?!\w);sushi(?!\w)
