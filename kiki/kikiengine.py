@@ -144,7 +144,11 @@ class Kiki:
         # Nejdelší podkapitoly
 
         self.podkapitoly = re.split("(\*\*\*|## )", surovy_vstup)
-        self.podkapitoly_prumer = sum(map(len, self.podkapitoly) ) / len(self.podkapitoly)
+        while "***" in self.podkapitoly:
+            self.podkapitoly.remove("***")
+        while "## " in self.podkapitoly:
+            self.podkapitoly.remove("## ")
+        self.podkapitoly_prumer = len(surovy_vstup) / len(self.podkapitoly)
         self.nejdelsi_podkapitola = max(self.podkapitoly, key=len)
         self.nejdelsi_podkapitola_kolikrat = len(self.nejdelsi_podkapitola) / self.podkapitoly_prumer 
         self.nejdelsi_podkapitola_kolikrat = "{:.2f}".format(self.nejdelsi_podkapitola_kolikrat).replace(".", ",")
@@ -189,4 +193,5 @@ class Kiki:
 {nr}Termity v uvozovkách:{nr}- {", ".join(self.uvozovky)} 
 {nr}Typografické chyby:{nr}- {", ".join(self.typochyby_nalezene)} 
 Správná znaménka ke zkopírování: … „ “ ‚ ‘ ×
-{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}"""
+{nr}Pohlídat kontext:          ▼{nr}- {nr_odr.join(self.kontextovky_nalezene)}
+"""

@@ -2,6 +2,7 @@
 \d*\.\sl[é|e]t\w*;\w+(tých|tými)\sl[é|e]t\w*\w+
 acetylén\w*;acetylen\w*
 babušk\w+;bábušk\w+
+balkón\w*;balkon\w*
 balón\w*;balon\w*
 basilik\w*;bazilik\w*
 benzín\w*;benzin\w*
@@ -24,6 +25,7 @@ konkurs\w*;konkurz\w*
 (?<=\s)krom(?=\s);(?<=\s)kromě(?=\s)
 kurs\w*;kurz\w*
 lah[veí]\w+;láh[veí]\w+
+Luhansk\w*;Lugansk\w*
 maršrut\w*;maršut\w*
 mechanism\w*;mechanizm\w*
 milion\w*;milión\w*
@@ -40,10 +42,14 @@ rekurz\w*;rekurs\w*
 resort\w*;rezort\w*
 reverz\w*;revers\w*
 San\sFrancisc\w*;San\sFrancisk\w*
+suši(?!\w);sushi(?!\w)
 šampion\w*;šampión\w*
+Turčynov\w*;Turčinov\w*
 vitamín\w*;vitamin\w*
 vagón\w*;vagon\w*
 (?<=\s)víc;(?<=\s)více
 (?<=\s)nejvíc;(?<=\s)nejvíce
 wifi;wi-fi
-suši(?!\w);sushi(?!\w)
+žluto-modr\w+;modro-žlut\w+
+žluto-modr\w+;žlutomodr\w+;
+modro-žlut\w+;modrožlut\w+

@@ -28,6 +28,7 @@ druhak
 \w*financov\w+
 finančn\w+\sprostředk\w+
 gastronomic\w+\szážit\w+
+hasící\spřístro\w*
 hlavní\w*\sprotagonist\w{1,4}
 \w+ilet\w+\s\výroč\w+
 jablk\w+\ssváru
@@ -62,6 +63,7 @@ nepřizpůsobiv\w+
 nervy\sv\skýblu
 n\wž\w{1,2}\sna\skrk\w?
 o\sčem\spřemýšlet
+obchází\sstrašidlo\s\w*
 olej\sdo\sohně
 ostře\skritiz\w+
 ostr\w+\skritik\w+
@@ -75,7 +77,7 @@ pojďme
 potencionáln\w*
 posvě\w+
 prask\w+\sve\sšvech
-projekt\w{,3}
+projekt[^i]\w*
 prostě
 prý
 přehrš\w+
@@ -112,6 +114,7 @@ větší\w*\sjak[^\w]
 [^\w]víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
 vlastně
+vojensk\w*\soblečen\w*
 volnočasov\w+\saktivi\w+
 \w{,2}vykomuni\w+
 vymalováno
