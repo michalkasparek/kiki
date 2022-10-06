@@ -79,7 +79,7 @@ posvě\w+
 prask\w+\sve\sšvech
 projekt[^i]\w*
 prostě
-prý
+prý[^\w]
 přehrš\w+
 rasov\w+\spodtext\w*
 realiz\w+
