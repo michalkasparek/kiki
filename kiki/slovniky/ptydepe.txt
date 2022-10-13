@@ -56,6 +56,7 @@ na\spravém\smístě
 na\ssvém\smístě
 nad\srozlitým\smlékem
 napříč\sspektrem
+napříč\s\w+\sspektrem
 narativ\w*
 následně
 nic\ssnazšího
