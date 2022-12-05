@@ -100,7 +100,7 @@ tah\w{,2}\sna\sbranku
 totiž
 třešničk\w+\sna\sdortu
 tuzemsk\w+
-údajně
+údajn\w*
 úheln\w+\sk\wmen\w*
 v\sdnešní\sdobě
 v\sneposlední\sřadě

@@ -24,7 +24,7 @@ kompars\w*;komparz\w*
 konkurs\w*;konkurz\w*
 (?<=\s)krom(?=\s);(?<=\s)kromě(?=\s)
 kurs\w*;kurz\w*
-lah[veí]\w+;láh[veí]\w+
+lahv[eí]\w+;láhv[eí]\w+
 Luhansk\w*;Lugansk\w*
 maršrut\w*;maršut\w*
 mechanism\w*;mechanizm\w*
@@ -42,6 +42,7 @@ rekurz\w*;rekurs\w*
 resort\w*;rezort\w*
 reverz\w*;revers\w*
 San\sFrancisc\w*;San\sFrancisk\w*
+serio[sz]n\w*;serió[sz]n\w*
 suši(?!\w);sushi(?!\w)
 šampion\w*;šampión\w*
 Turčynov\w*;Turčinov\w*

@@ -4,3 +4,4 @@
 [\s\S]{24}\sČech[\s\S]{45}
 [\s\S]{25}Holandsk[\s\S]{41}
 [\s\S]{25}Holanďan[\s\S]{41}
+[\s\S]{25}doslova[\s\S]{42}

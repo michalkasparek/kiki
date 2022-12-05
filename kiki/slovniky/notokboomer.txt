@@ -13,3 +13,5 @@ znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk�
 slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
 Stanfords\w+\suniv\w+;Správně je Stanfordova univerzita.
 Harvardsk\w+\suniv\w+;Správně je Harvardova univerzita.
+homosexuál\w*;„[V]ýraz pochází z lékařského prostředí a označuje pouze sexuální preferenci.“ PraguePride.cz jako náhradu doporučuje „gay“.
+transsexuál\w*;„[Z]astaralý výraz definující podle akademického slovníku cizích slov (Academia, 2005) transsexualismus jako ‚chorobnou touhu jedince pohlavně normálně vyvinutého žít jako osoba opačného pohlaví‘. Takový přístup ignoruje skutečnost, že mnoho trans lidí netouží po operativní změně pohlaví a pohybují se na spektru mezi binárními póly muž a žena. Navíc tento výraz limituje celou věc na záležitost těla a opomíjí identitu transgender osob.“ PraguePride.cz jako náhradu doporučuje „transgender osoba“, „transgender“ nebo „trans* lidé“.
