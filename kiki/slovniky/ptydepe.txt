@@ -62,6 +62,7 @@ následně
 nic\ssnazšího
 nepřizpůsobiv\w+
 nervy\sv\skýblu
+notoricky\sznám\w+
 n\wž\w{1,2}\sna\skrk\w?
 o\sčem\spřemýšlet
 obchází\sstrašidlo\s\w*
