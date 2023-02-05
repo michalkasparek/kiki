@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kiki"
+version = "0.7"
+authors = [
+    {name = "Michal Kašpárek", email = "mk@michalkasparek.cz"},
+]
+description = "Nástroj pro editor(k)y (českých) textů"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT license"}
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "markdown",
+    "tk"
+]
+
+[project.scripts]
+kiki = "kiki:kiki"

@@ -41,6 +41,7 @@ Pokud chcete pohlídat frázi, kterou Kiki nezná, přidejte ji na samostatný �
 
 ## Co je nového
 
+- 0.7: Refaktorizace směrem ke standardní package. ```pip install -e .``` umožní běh Kiki např. v Jupyter Notebooks, voláme ji prostřednictvím ```from kiki import Kiki``` (kompletní třída pro práci s textem) nebo ```from kiki import rozsekej_po_vetach``` (samostatná funkce pro rozdělení textu na věty). Šolichal jsem prakticky se všemi soubory, takže pokud jste Kiki zakutili do vlastních skriptů, budete zřejmě muset upravit cesty. Omlouvám se – a zároveň si do verze 1.0 vyhrazuju právo učit se metodou pokus-omyl. (5. 2. 2023)
 - 0.6: Hledání nejdelší podkapitoly. Rozdělení výpisu na strukturu a sloh. (19. 8. 2022)
 - 0.5: Hledání dublet. Přehlednější výpis ptydepe a boomerštiny. (16. 4. 2022)
 - 0.4: Velká refaktorizace: 1/ Zbavení závislosti na obří knihovně NLTK. 2/ Grafické rozhraní. 3/ Rozbor článku je přepsaný jako třída, takže lze Kiki snadno volat z ostatních skriptů, např. redakčních systémů či builderů. (13. 4. 2022)

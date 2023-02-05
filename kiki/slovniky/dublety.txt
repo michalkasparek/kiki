@@ -32,6 +32,7 @@ milion\w*;milión\w*
 (?<=\s)míň;(?<=\s)méně
 (?<=\s)nejmíň;(?<=\s)nejméně
 Mont Blank\w*;Mont Blanc\w*
+modro-žlut\w+;modrožlut\w+
 organism\w*;organizmus\w*
 paradentóz\w*;paradontóz\w*
 plasm\w+;plazm\w+
@@ -46,11 +47,14 @@ serio[sz]n\w*;serió[sz]n\w*
 suši(?!\w);sushi(?!\w)
 šampion\w*;šampión\w*
 Turčynov\w*;Turčinov\w*
-vitamín\w*;vitamin\w*
 vagón\w*;vagon\w*
 (?<=\s)víc;(?<=\s)více
+vitamín\w*;vitamin\w*
 (?<=\s)nejvíc;(?<=\s)nejvíce
 wifi;wi-fi
+za prvé;zaprvé
+za druhé;zadruhé
+za prvé;zadruhé
+zaprvé;za druhé
 žluto-modr\w+;modro-žlut\w+
 žluto-modr\w+;žlutomodr\w+;
-modro-žlut\w+;modrožlut\w+

@@ -112,6 +112,7 @@ v\srámci
 v\ssoučasnosti
 v\ssoučasné\sdobě
 v\ssukn(i|ích)
+velk\w*\slouž\w*
 větší\w*\sjak[^\w]
 [^\w]víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
