@@ -5,6 +5,7 @@ asi\stak\svšechno,\sco\ss\stím\smůžeme\sdělat
 [^\w]během
 bitv\w+\so(?=\s\w+)
 bobřík\w{,3}
+bouř\w{1,4}\sve\ssklenici\svody
 brous\w+\szuby
 cel\w{1,3}\sřad\w{1,3}
 cel\w{,3}\sinterne\w{1,3}
@@ -14,6 +15,7 @@ co\sse\stýče
 časov\w+\shorizont\w+
 člověčenství
 člověčin\w+
+čtyřnoh\w\smiláč\w+
 dál\w?\sprohl\w+
 daňov\w+\spoplatní\w+
 [^\w]dedik\w+
@@ -75,6 +77,7 @@ platform\w+
 pod\srouškou\stmy
 pod\srouškou\snoci
 pod\staktovkou
+podle\ssvých\sslov
 pojďme
 potencionáln\w*
 posvě\w+
@@ -114,6 +117,7 @@ v\ssoučasné\sdobě
 v\ssukn(i|ích)
 velk\w*\slouž\w*
 větší\w*\sjak[^\w]
+\svězte,*\sže
 [^\w]víc\w*\sjak(?=\s)
 vlajkov\w+\slo\w{1,2}
 vlastně
