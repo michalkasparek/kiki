@@ -1,17 +1,18 @@
-globál\w+\sotepl\w+;Jde o zavádějící pojmenování, protože nárůst průměrných teplot je jen jedním z projevů změn klimatu, vedle například extrémních lokálních ochlazení. Lepší bývá použít právě „změna klimatu“ nebo „změny klimatu“, případně „klimatická krize“.
-schizofr\w+;Slova „schizofrenie“ nebo „schizofrenní“ by se měla používat čistě v přímé souvislosti se specifickou duševní poruchou, která navzdory rozšířeným předsudkům nespočívá v rozpolcení mysli. Metaforická použití lze nahradit právě „rozpolceností“ a podobnými slovy.
-sex\w+\sharaš\w+;Nic takového neexistuje, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
-lesbičk\w+;Nejsou to „lesbičky“, ale „lesby“.
+Čern\w*\skontinen\w*;Je to prostě Afrika.
 Eskymá\w+;Zastaralé pojmenování s pejorativním nádechem. Jeho nejlepší náhradou bývá uvést konkrétní národ.
-Křová[ck]\w*;Zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
-hyster\w+;Obecně není dobrý nápad tak označovat kohokoliv nebo cokoliv.
-vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS-CoV-2. 
-(Wachowš\w+|Larry\w*\sWachow\w+|Andy\w*\sWachow\w+|Bradley\w*\s\w*\s*Manning\w*|Ellen\w*\sPage\w*);Označování trans osoby jménem, které používala před tranzicí, se říká deadnaming a je to hrubě nevhodné.
-(vozíčkář\w+|autist[ayůo]|invalid[ayo]|neslyšíc|hluchoněm\w+|nevidom\w+);Veřejný ochránce lidských práv doporučuje nepoužívat jednoslovné výrazy spojené s postižením. Lze je nahradit opisy „člověk, který je…“ nebo „člověk s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
-(zdravotně|tělesně|duševně)\spostižen\w+;Veřejný ochránce lidských doporučuje místo o zdravotně, duševně či tělesně „postižených“ psát o „lidech s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
-znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk“.
-slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
-Stanfords\w+\suniv\w+;Správně je Stanfordova univerzita.
+globál\w+\sotepl\w+;Jde o zavádějící pojmenování, protože nárůst průměrných teplot je jen jedním z projevů změn klimatu, vedle například extrémních lokálních ochlazení. Lepší bývá použít právě „změna klimatu“ nebo „změny klimatu“, případně „klimatická krize“.
 Harvardsk\w+\suniv\w+;Správně je Harvardova univerzita.
 homosexuál\w*;„[V]ýraz pochází z lékařského prostředí a označuje pouze sexuální preferenci.“ PraguePride.cz jako náhradu doporučuje „gay“.
+hyster\w+;Obecně není dobrý nápad tak označovat kohokoliv nebo cokoliv.
+Křová[ck]\w*;Zastaralé pojmenování s pejorativním nádechem. Západní antropologové o nich dnes píšou nejčastěji jako o „Sanech“.
+lesbičk\w+;Nejsou to „lesbičky“, ale „lesby“.
+sex\w+\sharaš\w+;Nic takového neexistuje, vždy jde o „sexuální obtěžování“ či „sexuální násilí“.
+schizofr\w+;Slova „schizofrenie“ nebo „schizofrenní“ by se měla používat čistě v přímé souvislosti se specifickou duševní poruchou, která navzdory rozšířeným předsudkům nespočívá v rozpolcení mysli. Metaforická použití lze nahradit právě „rozpolceností“ a podobnými slovy.
+slepeck\w+\s(hůl\w+|hol\w+|písm\w+|brýl\w+|pes\w+|ps\w+);Vhodnější než „slepecká hůl“ a podobně je „bílá hůl“, „vodicí pes“, „tmavé brýle“ a „Braillovo bodové písmo“.
+Stanfords\w+\suniv\w+;Správně je Stanfordova univerzita.
 transsexuál\w*;„[Z]astaralý výraz definující podle akademického slovníku cizích slov (Academia, 2005) transsexualismus jako ‚chorobnou touhu jedince pohlavně normálně vyvinutého žít jako osoba opačného pohlaví‘. Takový přístup ignoruje skutečnost, že mnoho trans lidí netouží po operativní změně pohlaví a pohybují se na spektru mezi binárními póly muž a žena. Navíc tento výraz limituje celou věc na záležitost těla a opomíjí identitu transgender osob.“ PraguePride.cz jako náhradu doporučuje „transgender osoba“, „transgender“ nebo „trans* lidé“.
+vir\w*\scovi\w+;„Covid“ je název onemocnění, ne viru. Ten se jmenuje SARS-CoV-2. 
+(vozíčkář\w+|autist[ayůo]|invalid[ayo]|neslyšíc|hluchoněm\w+|nevidom\w+);Veřejný ochránce lidských práv doporučuje nepoužívat jednoslovné výrazy spojené s postižením. Lze je nahradit opisy „člověk, který je…“ nebo „člověk s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
+(Wachowš\w+|Larry\w*\sWachow\w+|Andy\w*\sWachow\w+|Bradley\w*\s\w*\s*Manning\w*|Ellen\w*\sPage\w*);Označování trans osoby jménem, které používala před tranzicí, se říká deadnaming a je to hrubě nevhodné.
+(zdravotně|tělesně|duševně)\spostižen\w+;Veřejný ochránce lidských doporučuje místo o zdravotně, duševně či tělesně „postižených“ psát o „lidech s … postižením“. Viz manuál Jak mluvit a psát o lidech s postižením.
+znakov\w+\sřeč\w+;Vhodnější než „znaková řeč“ je „znakový jazyk“.

@@ -3,6 +3,7 @@ ale\s\w+\sjim\stam\slidi
 asi\stak\svšechno,\sco\sse\ss\stím\sdá\sdělat
 asi\stak\svšechno,\sco\ss\stím\smůžeme\sdělat
 [^\w]během
+\sbič\sna\s
 bitv\w+\so(?=\s\w+)
 bobřík\w{,3}
 bouř\w{1,4}\sve\ssklenici\svody
@@ -35,6 +36,7 @@ hlavní\w*\sprotagonist\w{1,4}
 \w+ilet\w+\s\výroč\w+
 jablk\w+\ssváru
 jak\w?\spo\smásle
+k[aá]me\w+\súrazu
 \w{,3}kontrover\w+
 kostliv\w+\sskřín\w+
 křišťálov\w+\skoul\w+
@@ -55,6 +57,7 @@ na\spoli\s
 na\spůdě
 na\spořadu\sdne
 na\spravém\smístě
+na\ssvém\skontě
 na\ssvém\smístě
 nad\srozlitým\smlékem
 napříč\sspektrem
@@ -74,6 +77,7 @@ ostr\w+\skritik\w+
 paradigm\w+
 part\w+\snadšenců
 platform\w+
+pod\spalbou
 pod\srouškou\stmy
 pod\srouškou\snoci
 pod\staktovkou

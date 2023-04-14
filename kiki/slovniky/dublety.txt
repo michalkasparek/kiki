@@ -37,6 +37,7 @@ organism\w*;organizmus\w*
 paradentóz\w*;paradontóz\w*
 plasm\w+;plazm\w+
 (?<=\s)pian\w*;(?<=\s)pián\w*
+procen\w*;%
 puls\w*;pulz\w*
 Rakousko-Uherska;Rakouska-Uherska
 rekurz\w*;rekurs\w*

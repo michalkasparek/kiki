@@ -5,3 +5,4 @@
 [\s\S]{25}Holandsk[\s\S]{41}
 [\s\S]{25}Holanďan[\s\S]{41}
 [\s\S]{25}doslova[\s\S]{42}
+[\s\S]{25}Velk\w{1,3}\sBritáni\w{1,3}[\s\S]{35}
