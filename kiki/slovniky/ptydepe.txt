@@ -35,8 +35,10 @@ hasící\spřístro\w*
 hlavní\w*\sprotagonist\w{1,4}
 \w+ilet\w+\s\výroč\w+
 jablk\w+\ssváru
+jak\w?\sna\sběžícím\spás[eu]
 jak\w?\spo\smásle
 k[aá]me\w+\súrazu
+kde udělali soudruzi
 \w{,3}kontrover\w+
 kostliv\w+\sskřín\w+
 křišťálov\w+\skoul\w+
@@ -136,5 +138,6 @@ z\spochopitelných\sdůvodů
 zainvestov\w+
 \w{,3}zajímav\w+
 zelen\w+\srazítk\w+
+zem\w{1,4}\spod\sTatrami
 ztrá\w{1,4}\sna\sživotech
 želíz\w+\sv\sohni
