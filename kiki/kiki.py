@@ -12,9 +12,11 @@ Funkce a třídy pro běh Kiki:
 import sys
 import os
 import re
+import io
 from markdown import markdown
 import tkinter as tk
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
 def kikiokno():
     vzkaz_nahore = "Sem přijde text článku"
