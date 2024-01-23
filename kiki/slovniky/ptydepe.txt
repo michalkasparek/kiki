@@ -33,6 +33,7 @@ finančn\w+\sprostředk\w+
 gastronomic\w+\szážit\w+
 hasící\spřístro\w*
 hlavní\w*\sprotagonist\w{1,4}
+chy\w*\sv\s[Mm]atri\w*
 \w+ilet\w+\s\výroč\w+
 jablk\w+\ssváru
 jak\w?\sna\sběžícím\spás[eu]
