@@ -47,6 +47,7 @@ kudy\sběží\szajíc
 kultovn\w+
 kvituji
 kvitova\w+
+labut\w+\spís\w+
 lidsk\w+\sfakto\w+
 manuálw\+\szručn\w+
 medvědí\sslužb\w+
