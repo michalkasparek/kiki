@@ -92,6 +92,7 @@ posvě\w+
 prask\w+\sve\sšvech
 projekt[^i]\w*
 prostě
+provenience
 prý[^\w]
 přehrš\w+
 rasov\w+\spodtext\w*
