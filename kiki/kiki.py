@@ -9,6 +9,11 @@ Funkce a třídy pro běh Kiki:
 - kikistart() = načte soubor (když dostane cestu), nebo otevře okno (když ne)
 """
 
+# to-do pro refaktorizaci:
+# - zbavit se té třídy
+# - zbavit se závislosti na markdownu – odstranit markdownové věci regexem, otestovat
+# - slovníky v JSONech (nebo jednom JSONu) pro snazší nasazení na webu
+
 import sys
 import os
 import re

@@ -1,12 +1,14 @@
 \d*\.\sstolet\w*;\w+(té|tém|tého|tým|tému)\sstolet\w+
 \d*\.\sl[é|e]t\w*;\w+(tých|tými)\sl[é|e]t\w*\w+
 acetylén\w*;acetylen\w*
+archiv\w*;archív\w*
 babušk\w+;bábušk\w+
 balkón\w*;balkon\w*
 balón\w*;balon\w*
 basilik\w*;bazilik\w*
 benzín\w*;benzin\w*
 bloger\w*;blogger\w*
+citron\w*;citrón\w*
 disertac\w*;dizertac\w*
 diskurs\w*;diskurz\w*
 diskus\w*;diskuz\w*
@@ -22,6 +24,7 @@ Janukovič\w*;Janukovyč\w*
 kamión\w*;kamion\w*
 kompars\w*;komparz\w*
 konkurs\w*;konkurz\w*
+Kyjev\w*;Kyjiv\w*
 (?<=\s)krom(?=\s);(?<=\s)kromě(?=\s)
 kurs\w*;kurz\w*
 lahv[eí]\w+;láhv[eí]\w+
@@ -45,6 +48,8 @@ resort\w*;rezort\w*
 reverz\w*;revers\w*
 San\sFrancisc\w*;San\sFrancisk\w*
 serio[sz]n\w*;serió[sz]n\w*
+sezon\w*;sezón\w*
+sci-fi;scifi
 suši(?!\w);sushi(?!\w)
 šampion\w*;šampión\w*
 Turčynov\w*;Turčinov\w*
